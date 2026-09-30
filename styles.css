@@ -34,33 +34,85 @@ a{color:inherit}.topnav{position:fixed;inset:0 0 auto;z-index:1000;background:co
 }
 
 
-/* Coursework */
-.course-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
+/* Coursework — compact two-column cards */
+#coursework .section-head{
+  margin-bottom:28px;
 }
-.course-item{
-  display:flex;
-  align-items:baseline;
-  gap:10px;
-  min-height:58px;
-  padding:15px 18px;
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:13px;
-  box-shadow:0 6px 18px rgba(25,55,95,.05);
+
+#coursework .course-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:14px !important;
 }
-.course-item strong{
-  color:var(--accent);
+
+#coursework .course-item{
+  display:grid !important;
+  grid-template-columns:110px minmax(0,1fr) !important;
+  align-items:center !important;
+  gap:16px !important;
+  min-height:72px !important;
+  padding:16px 20px !important;
+  background:linear-gradient(
+    135deg,
+    var(--surface) 0%,
+    color-mix(in srgb,var(--surface2) 58%,var(--surface)) 100%
+  ) !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px !important;
+  box-shadow:0 8px 22px rgba(25,55,95,.07) !important;
+  overflow:hidden;
+  position:relative;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+
+#coursework .course-item::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:var(--accent);
+}
+
+#coursework .course-item:hover{
+  transform:translateY(-3px);
+  border-color:color-mix(in srgb,var(--accent) 55%,var(--line));
+  box-shadow:0 12px 28px rgba(25,55,95,.12) !important;
+}
+
+#coursework .course-item strong{
+  color:var(--accent) !important;
   white-space:nowrap;
-  font-size:1.02rem;
+  font-size:1rem !important;
+  font-weight:850;
+  letter-spacing:.01em;
 }
-.course-item span{color:var(--text)}
-html[data-theme="dark"] .course-item{
-  background:var(--surface);
-  border-color:var(--line);
+
+#coursework .course-item span{
+  color:var(--text) !important;
+  font-size:.98rem;
+  line-height:1.35;
 }
-@media(max-width:760px){
-  .course-grid{grid-template-columns:1fr}
+
+html[data-theme="dark"] #coursework .course-item{
+  background:linear-gradient(
+    135deg,
+    var(--surface) 0%,
+    color-mix(in srgb,var(--surface2) 72%,var(--surface)) 100%
+  ) !important;
+  border-color:var(--line) !important;
+  box-shadow:0 10px 26px rgba(0,0,0,.18) !important;
+}
+
+@media(max-width:900px){
+  #coursework .course-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:520px){
+  #coursework .course-item{
+    grid-template-columns:1fr !important;
+    gap:3px !important;
+    padding:14px 17px !important;
+  }
 }
