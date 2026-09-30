@@ -1,7 +1,3 @@
-# Pradip Portfolio V18.5 TEST
+# Pradip Sapkota Portfolio — V18.5 TEST
 
-Test copy of the uploaded portfolio. Production was not modified.
-
-The first four projects expand to reveal their GitHub links. Click anywhere on a card or activate its chevron with Enter/Space. GitHub opens in a new tab. Existing project content remains visible.
-
-CNAME and sitemap removed; every HTML page uses noindex,nofollow; robots.txt disallows crawling. Production canonical and structured metadata removed.
+First four project cards expand smoothly and reveal GitHub repository links. V18.4 UI/navigation/theme is otherwise preserved. Test only: no CNAME, no production canonical, no sitemap, indexing disabled.
