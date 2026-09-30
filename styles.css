@@ -14,3 +14,21 @@ a{color:inherit}.topnav{position:fixed;inset:0 0 auto;z-index:1000;background:co
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);padding:18px 24px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.hero-grid,.two-col{grid-template-columns:1fr}.hero-visual{min-height:430px}.skill-grid,.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto}.job-head{flex-direction:column;gap:2px}.certificate-card{grid-template-columns:1fr}.section{padding:88px 20px}.section.alt{padding-left:20px;padding-right:20px}.hero h1{font-size:4rem}}
 @media(max-width:520px){.brand span:last-child{display:none}.hero h1{font-size:3.3rem}.hero-visual{min-height:360px}.portrait-frame{width:280px}.floating-chip{font-size:.76rem}.contact-box{padding:32px 20px}}
+
+
+/* Active section indicator */
+.nav-links a[href^="#"] {
+  position: relative;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.nav-links a[href^="#"].active {
+  background: var(--accent);
+  color: #fff !important;
+  border-color: var(--accent);
+  border-radius: 10px;
+  padding: 7px 11px;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+.nav-links a[href^="#"].active:hover {
+  color: #fff !important;
+}

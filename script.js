@@ -17,6 +17,7 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const sections=[...document.querySelectorAll('main section[id]')], nav=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+nav[0]?.classList.add('active');
 window.addEventListener('scroll',()=>{
   let current='home';
   sections.forEach(s=>{if(window.scrollY>=s.offsetTop-140)current=s.id});
