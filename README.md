@@ -1,20 +1,17 @@
-# Pradip Sapkota — Engineering Portfolio
+# Pradip Engineering Portfolio — V15.8 Glass Test
 
-Production portfolio for **https://pradipsapkota.dev**
+Test-only visual experiment based on V15.7.
 
-Includes:
-- About
-- Technical Skills
-- Relevant Coursework
-- Professional & Research Experience
-- Engineering Projects
-- Certificates
-- Contact / Resume
-- Light & dark themes
-- Active section navigation
-- Responsive mobile layout
+Changes:
+- translucent/glass content cards
+- glass navigation
+- subtle blue ambient background glows
+- translucent hero role badge
+- glass secondary buttons, quick facts, and floating technology chips
+- enhanced dark-mode glass treatment
+- existing mobile fixes and hover behavior preserved
 
-## GitHub Pages
-Deploy from the `main` branch at `/ (root)`.
-
-The included `CNAME` configures the site for `pradipsapkota.dev`.
+Safety:
+- no CNAME
+- noindex, nofollow
+- intended for the GitHub Pages test repository only
