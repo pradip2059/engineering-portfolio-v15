@@ -32,3 +32,35 @@ a{color:inherit}.topnav{position:fixed;inset:0 0 auto;z-index:1000;background:co
 .nav-links a[href^="#"].active:hover {
   color: #fff !important;
 }
+
+
+/* Coursework */
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.course-item{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  min-height:58px;
+  padding:15px 18px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:13px;
+  box-shadow:0 6px 18px rgba(25,55,95,.05);
+}
+.course-item strong{
+  color:var(--accent);
+  white-space:nowrap;
+  font-size:1.02rem;
+}
+.course-item span{color:var(--text)}
+html[data-theme="dark"] .course-item{
+  background:var(--surface);
+  border-color:var(--line);
+}
+@media(max-width:760px){
+  .course-grid{grid-template-columns:1fr}
+}
