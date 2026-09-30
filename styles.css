@@ -1456,3 +1456,26 @@ html[data-theme="light"] #projects.section.alt {
     right: 22px;
   }
 }
+
+
+/* =========================================================
+   V18.5.4 TEST — true independent two-column project layout
+   Each column flows independently: expanding a left card only
+   pushes the next LEFT card; the right column stays in place.
+   ========================================================= */
+@media (min-width: 901px) {
+  .project-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 1px !important;
+    column-gap: 22px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+
+  .project-grid > .project-card {
+    width: auto !important;
+    height: auto !important;
+    align-self: start !important;
+  }
+}

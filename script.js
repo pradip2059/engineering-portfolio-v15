@@ -101,3 +101,43 @@ requestAnimationFrame(()=>{
 
 // V18.5 TEST — accessible expandable project cards
 document.querySelectorAll('.expandable-project').forEach(card=>{const panel=card.querySelector('.project-repo-panel'),hintText=card.querySelector('.project-expand-hint span'),githubLink=card.querySelector('.project-github-btn');const setExpanded=expanded=>{card.classList.toggle('is-expanded',expanded);card.setAttribute('aria-expanded',String(expanded));panel?.setAttribute('aria-hidden',String(!expanded));if(hintText)hintText.textContent=expanded?'Hide project link':'View project'};const toggleCard=()=>setExpanded(card.getAttribute('aria-expanded')!=='true');card.addEventListener('click',event=>{if(event.target.closest('a,button'))return;toggleCard()});card.addEventListener('keydown',event=>{if(event.target.closest('a,button'))return;if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard()}});githubLink?.addEventListener('click',event=>event.stopPropagation())});
+
+
+// V18.5.4 TEST — masonry sizing for independent project columns.
+// Expanding a card only moves cards beneath it in the same column.
+(() => {
+  const grid = document.querySelector('.project-grid');
+  if (!grid) return;
+
+  const desktop = () => window.innerWidth > 900;
+
+  function resizeProjectCard(card) {
+    if (!desktop()) {
+      card.style.removeProperty('grid-row-end');
+      return;
+    }
+    const row = 1;
+    const gap = 22;
+    const height = card.getBoundingClientRect().height;
+    const span = Math.ceil((height + gap) / (row + gap));
+    card.style.gridRowEnd = `span ${span}`;
+  }
+
+  function resizeProjectGrid() {
+    grid.querySelectorAll(':scope > .project-card').forEach(resizeProjectCard);
+  }
+
+  // Recalculate continuously while an expandable card animates,
+  // so the card below glides with it instead of jumping afterward.
+  grid.querySelectorAll('.expandable-project').forEach(card => {
+    const observer = new ResizeObserver(() => resizeProjectCard(card));
+    observer.observe(card);
+  });
+
+  const gridObserver = new ResizeObserver(resizeProjectGrid);
+  gridObserver.observe(grid);
+
+  window.addEventListener('load', resizeProjectGrid);
+  window.addEventListener('resize', resizeProjectGrid, { passive: true });
+  requestAnimationFrame(resizeProjectGrid);
+})();
