@@ -1,7 +1,3 @@
-# Pradip Sapkota — Engineering Portfolio
+# Pradip Sapkota Portfolio — V18.5 TEST
 
-Portfolio website for Pradip Sapkota, B.S. Computer Engineering candidate at Minnesota State University, Mankato (expected December 2026).
-
-Focus areas: Controls & Automation, Electrical Hardware & Test, Embedded Software/Firmware, and Robotics.
-
-Live site: https://pradip2059.github.io/GitHub-portfolio/
+First four project cards expand smoothly and reveal GitHub repository links. V18.4 UI/navigation/theme is otherwise preserved. Test only: no CNAME, no production canonical, no sitemap, indexing disabled.
