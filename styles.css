@@ -1458,43 +1458,28 @@ html[data-theme="light"] #projects.section.alt {
 }
 
 
-/* =========================================================
-   V18.5.5 TEST — conservative independent-column flow
-   V18.5.3 card visuals/animations are untouched.
-   Only the project container is split into two normal-flow columns.
-   ========================================================= */
-@media (min-width: 901px) {
-  .project-grid.project-independent-columns {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 22px !important;
+/* V18.5.6 TEST — independent project columns only */
+@media (min-width:901px){
+  #projects .project-grid.project-independent-columns{
+    display:flex!important;
+    align-items:flex-start!important;
+    gap:22px!important;
   }
-
-  .project-independent-columns > .project-column {
-    flex: 1 1 0 !important;
-    min-width: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 22px !important;
+  #projects .project-independent-columns>.project-column{
+    flex:1 1 0!important;
+    min-width:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    gap:22px!important;
   }
-
-  .project-independent-columns .project-card {
-    width: 100% !important;
-    flex: 0 0 auto !important;
-    align-self: stretch !important;
+  #projects .project-independent-columns .project-card{
+    width:100%!important;
+    flex:0 0 auto!important;
+    align-self:stretch!important;
   }
 }
-
-@media (max-width: 900px) {
-  .project-grid.project-independent-columns {
-    display: block !important;
-  }
-
-  .project-independent-columns > .project-column {
-    display: contents !important;
-  }
-
-  .project-independent-columns .project-card {
-    margin-bottom: 18px;
-  }
+@media (max-width:900px){
+  #projects .project-grid.project-independent-columns{display:block!important}
+  #projects .project-independent-columns>.project-column{display:contents!important}
+  #projects .project-independent-columns .project-card{margin-bottom:18px}
 }
