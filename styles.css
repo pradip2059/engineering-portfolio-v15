@@ -116,3 +116,187 @@ html[data-theme="dark"] #coursework .course-item{
     padding:14px 17px !important;
   }
 }
+
+
+/* V15.4 — mobile width / overflow hardening */
+html, body {
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body {
+  min-width:0;
+}
+
+main, section, .section, .nav-inner,
+.hero-grid, .hero-copy, .hero-visual,
+.two-col, .skill-grid, .course-grid,
+.timeline, .timeline-item, .timeline-card,
+.project-grid, .project-card,
+.certificate-card, .contact-box {
+  min-width:0;
+  max-width:100%;
+}
+
+img, svg, video, iframe {
+  max-width:100%;
+  height:auto;
+}
+
+p, li, h1, h2, h3, span, a {
+  overflow-wrap:anywhere;
+}
+
+@media(max-width:900px){
+  .nav-inner{
+    width:100%;
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  .nav-links{
+    width:100%;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .section,
+  .section.alt{
+    width:100%;
+    max-width:100%;
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:105px;
+    padding-bottom:72px;
+  }
+
+  .hero-grid{
+    width:100%;
+    gap:34px;
+  }
+
+  .hero-copy{
+    width:100%;
+  }
+
+  .hero h1{
+    font-size:clamp(2.9rem,14vw,4rem);
+    overflow-wrap:normal;
+  }
+
+  .role-strip{
+    max-width:100%;
+    white-space:normal;
+  }
+
+  .hero-visual{
+    width:100%;
+    min-height:390px;
+    overflow:hidden;
+  }
+
+  .hero-visual:before{
+    width:min(280px,72vw);
+    height:min(280px,72vw);
+  }
+
+  .hero-visual:after{
+    width:min(340px,84vw);
+    height:min(340px,84vw);
+  }
+
+  .portrait-frame{
+    width:min(300px,76vw);
+  }
+
+  .floating-chip{
+    max-width:42vw;
+    white-space:normal;
+    text-align:center;
+  }
+
+  .two-col,
+  .skill-grid,
+  .project-grid,
+  #coursework .course-grid{
+    width:100%;
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+
+  .card,
+  .timeline-card,
+  .project-card,
+  .certificate-card,
+  .contact-box,
+  #coursework .course-item{
+    width:100%;
+    max-width:100%;
+  }
+
+  .timeline{
+    margin-left:0;
+  }
+
+  .timeline-item{
+    padding-left:30px;
+  }
+
+  .timeline:before{
+    left:6px;
+  }
+
+  .dot{
+    left:-1px;
+  }
+
+  .job-head{
+    width:100%;
+  }
+
+  .job-head > span{
+    white-space:normal;
+  }
+}
+
+@media(max-width:520px){
+  .section,
+  .section.alt{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .card,
+  .timeline-card,
+  .project-card,
+  .certificate-card{
+    padding:20px 18px;
+    border-radius:15px;
+  }
+
+  .contact-box{
+    padding:28px 18px;
+  }
+
+  .hero-actions .btn{
+    flex:1 1 100%;
+    justify-content:center;
+  }
+
+  .quick-facts{
+    gap:7px;
+  }
+
+  .quick-facts span{
+    font-size:.78rem;
+  }
+
+  #coursework .course-item{
+    padding:14px 16px !important;
+  }
+}
