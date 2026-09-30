@@ -1,11 +1,7 @@
-# Pradip Portfolio V18.4 — Clean Nav Hover TEST
+# Pradip Portfolio V18.5 TEST
 
-Based directly on the approved V18.3 production build.
+Test copy of the uploaded portfolio. Production was not modified.
 
-Changes:
-- Desktop/tablet section navigation is text-only at rest.
-- A subtle rounded blue glass capsule appears only on hover/focus.
-- The approved V18.3 smooth shared active-section indicator remains unchanged.
-- Resume keeps its outlined button treatment.
-- Mobile behavior is unchanged.
-- Test-only package: no CNAME; noindex/nofollow; production canonical/sitemap removed.
+The first four projects expand to reveal their GitHub links. Click anywhere on a card or activate its chevron with Enter/Space. GitHub opens in a new tab. Existing project content remains visible.
+
+CNAME and sitemap removed; every HTML page uses noindex,nofollow; robots.txt disallows crawling. Production canonical and structured metadata removed.
