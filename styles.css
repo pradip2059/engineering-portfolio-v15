@@ -300,3 +300,53 @@ p, li, h1, h2, h3, span, a {
     padding:14px 16px !important;
   }
 }
+
+
+/* V15.5 — consistent interactive hover on content boxes only */
+.card,
+.skill-card,
+.timeline-card,
+.project-card,
+.certificate-card,
+.contact-box,
+#coursework .course-item {
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease !important;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .card:hover,
+  .skill-card:hover,
+  .timeline-card:hover,
+  .project-card:hover,
+  .certificate-card:hover,
+  .contact-box:hover {
+    transform:translateY(-4px);
+    border-color:color-mix(in srgb,var(--accent) 48%,var(--line)) !important;
+    box-shadow:0 14px 32px rgba(25,55,95,.13) !important;
+  }
+
+  html[data-theme="dark"] .card:hover,
+  html[data-theme="dark"] .skill-card:hover,
+  html[data-theme="dark"] .timeline-card:hover,
+  html[data-theme="dark"] .project-card:hover,
+  html[data-theme="dark"] .certificate-card:hover,
+  html[data-theme="dark"] .contact-box:hover {
+    box-shadow:0 16px 34px rgba(0,0,0,.30) !important;
+  }
+}
+
+/* Touch devices should stay still when tapped. */
+@media (hover:none) {
+  .card:hover,
+  .skill-card:hover,
+  .timeline-card:hover,
+  .project-card:hover,
+  .certificate-card:hover,
+  .contact-box:hover,
+  #coursework .course-item:hover {
+    transform:none;
+  }
+}
