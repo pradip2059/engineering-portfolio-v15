@@ -1415,3 +1415,44 @@ html[data-theme="light"] #projects.section.alt {
     align-self: flex-start !important;
   }
 }
+
+
+/* =========================================================
+   V18.5.3 TEST — V18.5 top-right arrow, no text hint
+   Independent-card sizing from V18.5.2 is retained.
+   ========================================================= */
+.expandable-project {
+  position: relative !important;
+}
+
+.expandable-project .project-expand-hint {
+  display: none !important;
+}
+
+.project-expand-chevron {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--accent);
+  font-size: .95rem;
+  line-height: 1;
+  pointer-events: none;
+  transition: transform 480ms cubic-bezier(.16,1,.3,1);
+}
+
+.expandable-project.is-expanded .project-expand-chevron {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+  .project-expand-chevron {
+    top: 22px;
+    right: 22px;
+  }
+}
