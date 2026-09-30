@@ -1090,3 +1090,121 @@ html[data-theme="light"] #projects.section.alt {
   backdrop-filter: blur(24px) saturate(175%) !important;
   -webkit-backdrop-filter: blur(24px) saturate(175%) !important;
 }
+
+
+/* =========================================================
+   V17.3 TEST — MOBILE-ONLY liquid glass navigation fix
+   Desktop V17.2 is intentionally unchanged.
+   ========================================================= */
+@media (max-width: 900px) {
+  /* Keep the header as the only floating glass capsule. */
+  .topnav {
+    overflow: visible !important;
+    z-index: 1000 !important;
+  }
+
+  /* Mobile menu becomes an opaque-enough floating panel so page text
+     does not visually bleed through it. */
+  .nav-links {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100dvh - 112px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 10px !important;
+    gap: 5px !important;
+
+    background:
+      linear-gradient(145deg,
+        rgba(7, 27, 53, .97) 0%,
+        rgba(8, 35, 69, .965) 55%,
+        rgba(8, 28, 55, .97) 100%) !important;
+    border: 1px solid rgba(105, 177, 255, .28) !important;
+    border-radius: 22px !important;
+    backdrop-filter: blur(30px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(155%) !important;
+    box-shadow:
+      0 24px 60px rgba(0,0,0,.48),
+      inset 0 1px 0 rgba(255,255,255,.09) !important;
+  }
+
+  /* Full-width rounded mobile targets; no rectangular hover states. */
+  .nav-links a,
+  .nav-links .resume-link,
+  .nav-links .theme-toggle {
+    width: 100% !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+    margin: 0 !important;
+    border-radius: 14px !important;
+    background: rgba(12, 48, 91, .22) !important;
+    border: 1px solid transparent !important;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible,
+  .nav-links .resume-link:hover,
+  .nav-links .resume-link:focus-visible,
+  .nav-links .theme-toggle:hover,
+  .nav-links .theme-toggle:focus-visible {
+    border-radius: 14px !important;
+    background: rgba(40, 103, 180, .34) !important;
+    border-color: rgba(111, 183, 255, .22) !important;
+  }
+
+  .nav-links a[href^="#"].active {
+    border-radius: 14px !important;
+    background:
+      linear-gradient(135deg,
+        rgba(80, 160, 255, .94),
+        rgba(39, 115, 221, .88)) !important;
+    border: 1px solid rgba(180, 219, 255, .48) !important;
+    box-shadow:
+      0 8px 22px rgba(39, 116, 226, .28),
+      inset 0 1px 0 rgba(255,255,255,.28) !important;
+  }
+
+  /* Theme control stays comfortably inside the panel. */
+  .nav-links .theme-toggle {
+    justify-content: flex-start !important;
+  }
+
+  /* Light-mode equivalent: enough opacity to hide page content. */
+  html[data-theme="light"] .nav-links {
+    background:
+      linear-gradient(145deg,
+        rgba(242, 248, 255, .975),
+        rgba(224, 239, 255, .97)) !important;
+    border-color: rgba(64, 132, 216, .24) !important;
+    box-shadow:
+      0 24px 60px rgba(41, 78, 120, .24),
+      inset 0 1px 0 rgba(255,255,255,.85) !important;
+  }
+
+  html[data-theme="light"] .nav-links a,
+  html[data-theme="light"] .nav-links .resume-link,
+  html[data-theme="light"] .nav-links .theme-toggle {
+    background: rgba(218, 236, 255, .30) !important;
+  }
+}
+
+/* Phone refinement only. */
+@media (max-width: 520px) {
+  .nav-links {
+    border-radius: 19px !important;
+    padding: 9px !important;
+  }
+
+  .nav-links a,
+  .nav-links .resume-link,
+  .nav-links .theme-toggle {
+    min-height: 46px !important;
+    padding: 9px 13px !important;
+    border-radius: 13px !important;
+  }
+}
