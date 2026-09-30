@@ -996,3 +996,25 @@ html[data-theme="light"] .floating-chip {
     -webkit-backdrop-filter: none !important;
   }
 }
+
+
+/* V17.1 TEST — rounded liquid-glass nav hover/active states */
+.nav-links a,
+.nav-links a[href^="#"],
+.resume-link,
+.theme-toggle {
+  border-radius: 14px !important;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.resume-link:hover,
+.resume-link:focus-visible,
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-radius: 14px !important;
+}
+
+.nav-links a[href^="#"].active {
+  border-radius: 14px !important;
+}
