@@ -350,3 +350,34 @@ p, li, h1, h2, h3, span, a {
     transform:none;
   }
 }
+
+
+/* V15.6 TEST — cleaner mobile role strip */
+@media (max-width: 900px) {
+  .role-strip {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    max-width: 100%;
+    padding: 11px 16px;
+    border-radius: 16px;
+    background: color-mix(in srgb, #eaf3ff 88%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 18%, #dbe9fa);
+    box-shadow: 0 8px 22px rgba(25,55,95,.08);
+    line-height: 1.45;
+  }
+
+  html[data-theme="dark"] .role-strip {
+    background: color-mix(in srgb, #dcecff 12%, var(--surface));
+    border-color: color-mix(in srgb, var(--accent) 32%, var(--line));
+    box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  }
+}
+
+@media (max-width: 520px) {
+  .role-strip {
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: clamp(.88rem, 4vw, 1rem);
+  }
+}
