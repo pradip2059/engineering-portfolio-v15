@@ -1,17 +1,21 @@
-# Pradip Engineering Portfolio — V15.8 Glass Test
+# Pradip Engineering Portfolio — V17 Pure Liquid Glass TEST
 
-Test-only visual experiment based on V15.7.
+Test-only visual experiment based on production V16.2.
 
-Changes:
-- translucent/glass content cards
-- glass navigation
-- subtle blue ambient background glows
-- translucent hero role badge
-- glass secondary buttons, quick facts, and floating technology chips
-- enhanced dark-mode glass treatment
-- existing mobile fixes and hover behavior preserved
+Visual changes:
+- highly transparent blue glass cards
+- layered ambient blue backdrop visible through surfaces
+- floating iPhone-inspired liquid-glass navigation capsule
+- glass navigation items and active state
+- translucent role badge, quick facts, technology chips, and secondary buttons
+- specular glass highlights and stronger depth
+- matching frosted light mode
+- responsive glass mobile menu
 
 Safety:
-- no CNAME
+- CNAME removed
 - noindex, nofollow
-- intended for the GitHub Pages test repository only
+- canonical removed
+- production pradipsapkota.dev is not part of this package
+
+Deploy only to the test GitHub Pages repository.

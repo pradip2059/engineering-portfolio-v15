@@ -574,3 +574,425 @@ html[data-theme="dark"] .resume-link {
     -webkit-backdrop-filter: blur(12px) saturate(125%) !important;
   }
 }
+
+
+/* =========================================================
+   V16 FINAL — hero role badge spacing polish
+   ========================================================= */
+.hero .role-strip {
+  word-spacing: .10em !important;
+  letter-spacing: .005em !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+@media (max-width:520px) {
+  .hero .role-strip {
+    word-spacing: .07em !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+
+/* =========================================================
+   V16.1 FINAL — restore visible alternating section bands
+   ========================================================= */
+.section.alt {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--accent) 7%, var(--surface2)) 0%,
+      color-mix(in srgb, var(--surface2) 78%, var(--bg)) 55%,
+      color-mix(in srgb, var(--accent) 5%, var(--bg)) 100%
+    ) !important;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 15%, var(--line)) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 15%, var(--line)) !important;
+}
+
+html[data-theme="dark"] .section.alt {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18,39,68,.82) 0%,
+      rgba(14,31,54,.76) 55%,
+      rgba(19,43,74,.78) 100%
+    ) !important;
+  border-top-color: rgba(76,154,255,.16) !important;
+  border-bottom-color: rgba(76,154,255,.16) !important;
+}
+
+/* Keep normal sections transparent so the contrast is unmistakable. */
+.section:not(.alt):not(.contact) {
+  background: transparent;
+}
+
+
+/* =========================================================
+   V16.2 FINAL — clearer Home → About → Skills section rhythm
+   ========================================================= */
+
+/* Home stays the deepest/navy section. */
+#home {
+  background:
+    radial-gradient(circle at 82% 28%, rgba(76,154,255,.12), transparent 30%),
+    linear-gradient(180deg, rgba(7,16,29,.18), rgba(7,16,29,.05)) !important;
+}
+
+/* About gets a clearly lighter blue-glass band. */
+#about.section.alt {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22,48,82,.90) 0%,
+      rgba(18,42,73,.86) 50%,
+      rgba(24,52,88,.88) 100%
+    ) !important;
+  border-top: 1px solid rgba(76,154,255,.20) !important;
+  border-bottom: 1px solid rgba(76,154,255,.20) !important;
+}
+
+/* Skills returns to the deeper base so the transition is obvious. */
+#skills {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,18,32,.24),
+      rgba(8,18,32,.08)
+    ) !important;
+  border-top: 0 !important;
+}
+
+/* Light mode keeps the same alternating logic without becoming harsh. */
+html[data-theme="light"] #home {
+  background:
+    radial-gradient(circle at 82% 28%, rgba(76,154,255,.10), transparent 30%),
+    var(--bg) !important;
+}
+html[data-theme="light"] #about.section.alt {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(226,239,255,.92),
+      rgba(237,245,255,.88)
+    ) !important;
+}
+html[data-theme="light"] #skills {
+  background: var(--bg) !important;
+}
+
+
+/* =========================================================
+   V17 TEST — PURE BLUE LIQUID GLASS
+   High-transparency / layered-glass visual experiment.
+   ========================================================= */
+
+:root {
+  --glass-edge: rgba(82, 159, 255, .28);
+  --glass-highlight: rgba(255, 255, 255, .34);
+  --glass-shadow: rgba(22, 62, 115, .14);
+}
+
+html[data-theme="dark"] {
+  --glass-edge: rgba(91, 167, 255, .30);
+  --glass-highlight: rgba(255, 255, 255, .085);
+  --glass-shadow: rgba(0, 0, 0, .30);
+}
+
+/* Ambient blue canvas visible THROUGH the transparent surfaces. */
+body,
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(44,132,255,.25), transparent 29%),
+    radial-gradient(circle at 88% 18%, rgba(0,194,255,.16), transparent 25%),
+    radial-gradient(circle at 68% 52%, rgba(67,102,255,.18), transparent 30%),
+    radial-gradient(circle at 18% 78%, rgba(28,122,255,.16), transparent 28%),
+    linear-gradient(145deg, #07111f 0%, #0a1930 46%, #071321 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Remove opaque section bands: the page itself becomes the backdrop. */
+#home,
+#about.section.alt,
+#skills,
+#coursework.section.alt,
+#experience,
+#projects.section.alt,
+#certificates,
+.section.alt,
+.section:not(.alt):not(.contact) {
+  background: transparent !important;
+  border-top-color: rgba(91,167,255,.08) !important;
+  border-bottom-color: rgba(91,167,255,.08) !important;
+}
+
+/* iPhone-inspired floating liquid-glass navigation capsule. */
+.topnav {
+  top: 12px !important;
+  left: 16px !important;
+  right: 16px !important;
+  width: calc(100% - 32px) !important;
+  border: 1px solid rgba(133,190,255,.24) !important;
+  border-radius: 24px !important;
+  background:
+    linear-gradient(135deg, rgba(24,53,91,.48), rgba(11,31,57,.34)) !important;
+  backdrop-filter: blur(28px) saturate(185%) contrast(105%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(185%) contrast(105%) !important;
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    inset 0 -1px 0 rgba(91,167,255,.08) !important;
+  overflow: visible !important;
+}
+
+.topnav::before {
+  content: "";
+  position: absolute;
+  inset: 1px 12% auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+  pointer-events: none;
+}
+
+.nav-inner {
+  min-height: 62px !important;
+}
+
+/* Glass navigation items. */
+.nav-links a,
+.theme-toggle,
+.resume-link {
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  backdrop-filter: blur(14px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(150%) !important;
+}
+
+.nav-links a:hover,
+.theme-toggle:hover,
+.resume-link:hover {
+  background: rgba(76,154,255,.12) !important;
+  border-color: rgba(111,177,255,.22) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.nav-links a[href^="#"].active {
+  background:
+    linear-gradient(135deg, rgba(91,167,255,.82), rgba(45,124,239,.60)) !important;
+  border: 1px solid rgba(174,216,255,.42) !important;
+  box-shadow:
+    0 8px 24px rgba(41,120,230,.28),
+    inset 0 1px 0 rgba(255,255,255,.34) !important;
+}
+
+/* True translucent cards — much more transparent than V16. */
+.card,
+.skill-card,
+.timeline-card,
+.project-card,
+.certificate-card,
+.contact-box,
+#coursework .course-item {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(31,62,101,.36) 0%,
+      rgba(16,38,69,.24) 55%,
+      rgba(35,73,118,.27) 100%
+    ) !important;
+  border: 1px solid var(--glass-edge) !important;
+  backdrop-filter: blur(24px) saturate(175%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(175%) !important;
+  box-shadow:
+    0 20px 55px var(--glass-shadow),
+    inset 0 1px 0 var(--glass-highlight),
+    inset 0 -1px 0 rgba(67,139,230,.08) !important;
+}
+
+/* Specular liquid-glass highlight across card tops. */
+.card::after,
+.skill-card::after,
+.timeline-card::after,
+.project-card::after,
+.certificate-card::after,
+.contact-box::after,
+#coursework .course-item::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg,
+      rgba(255,255,255,.08) 0%,
+      transparent 20%,
+      transparent 72%,
+      rgba(76,154,255,.055) 100%);
+}
+
+/* Hero role badge as a true glass capsule. */
+.hero .role-strip {
+  background:
+    linear-gradient(135deg, rgba(61,126,207,.30), rgba(25,61,105,.22)) !important;
+  border: 1px solid rgba(107,177,255,.38) !important;
+  backdrop-filter: blur(24px) saturate(185%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(185%) !important;
+  box-shadow:
+    0 14px 36px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.15) !important;
+}
+
+/* Glass controls/chips. */
+.btn:not(.primary),
+.quick-facts span,
+.floating-chip {
+  background:
+    linear-gradient(135deg, rgba(29,61,101,.40), rgba(14,35,64,.28)) !important;
+  border: 1px solid rgba(91,167,255,.28) !important;
+  backdrop-filter: blur(20px) saturate(175%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(175%) !important;
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.13),
+    inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+/* Primary button gets a blue translucent luminous surface. */
+.btn.primary {
+  background:
+    linear-gradient(135deg, rgba(76,154,255,.94), rgba(40,119,235,.80)) !important;
+  border: 1px solid rgba(174,216,255,.40) !important;
+  box-shadow:
+    0 13px 32px rgba(42,123,238,.28),
+    inset 0 1px 0 rgba(255,255,255,.30) !important;
+}
+
+/* Stronger, fluid hover response. */
+@media (hover:hover) and (pointer:fine) {
+  .card:hover,
+  .skill-card:hover,
+  .timeline-card:hover,
+  .project-card:hover,
+  .certificate-card:hover,
+  .contact-box:hover,
+  #coursework .course-item:hover {
+    transform: translateY(-6px) scale(1.006) !important;
+    background:
+      linear-gradient(135deg, rgba(42,82,132,.44), rgba(19,47,84,.30)) !important;
+    border-color: rgba(103,176,255,.50) !important;
+    box-shadow:
+      0 26px 64px rgba(0,0,0,.25),
+      0 0 32px rgba(57,135,238,.08),
+      inset 0 1px 0 rgba(255,255,255,.15) !important;
+  }
+
+  .floating-chip:hover,
+  .quick-facts span:hover,
+  .btn:not(.primary):hover {
+    background: rgba(55,107,174,.38) !important;
+    border-color: rgba(112,183,255,.48) !important;
+  }
+}
+
+/* Light mode: frosted clear blue glass rather than opaque white. */
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(67,145,255,.25), transparent 30%),
+    radial-gradient(circle at 88% 20%, rgba(80,202,255,.20), transparent 27%),
+    radial-gradient(circle at 65% 62%, rgba(108,141,255,.16), transparent 30%),
+    linear-gradient(145deg, #e9f3ff 0%, #f7fbff 48%, #e8f3ff 100%) !important;
+}
+
+html[data-theme="light"] .topnav {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.56), rgba(221,238,255,.40)) !important;
+  border-color: rgba(74,139,222,.22) !important;
+  box-shadow:
+    0 16px 46px rgba(45,92,145,.13),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+html[data-theme="light"] .card,
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .timeline-card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .certificate-card,
+html[data-theme="light"] .contact-box,
+html[data-theme="light"] #coursework .course-item {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.54), rgba(221,238,255,.34)) !important;
+  border-color: rgba(67,132,216,.20) !important;
+  box-shadow:
+    0 18px 48px rgba(46,91,145,.10),
+    inset 0 1px 0 rgba(255,255,255,.88) !important;
+}
+
+html[data-theme="light"] .hero .role-strip,
+html[data-theme="light"] .btn:not(.primary),
+html[data-theme="light"] .quick-facts span,
+html[data-theme="light"] .floating-chip {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.56), rgba(218,237,255,.40)) !important;
+  border-color: rgba(65,135,225,.24) !important;
+  box-shadow:
+    0 12px 30px rgba(45,92,145,.09),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+/* Mobile: floating glass nav remains contained and page stays width-safe. */
+@media(max-width:900px) {
+  body { background-attachment: scroll !important; }
+
+  .topnav {
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: calc(100% - 16px) !important;
+    border-radius: 20px !important;
+  }
+
+  .nav-links {
+    background:
+      linear-gradient(135deg, rgba(14,36,66,.88), rgba(10,28,52,.82)) !important;
+    border: 1px solid rgba(91,167,255,.22) !important;
+    border-radius: 18px !important;
+    backdrop-filter: blur(28px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+    box-shadow: 0 22px 54px rgba(0,0,0,.30) !important;
+    padding: 12px !important;
+  }
+
+  html[data-theme="light"] .nav-links {
+    background: rgba(239,247,255,.88) !important;
+  }
+
+  .card,
+  .skill-card,
+  .timeline-card,
+  .project-card,
+  .certificate-card,
+  .contact-box,
+  #coursework .course-item {
+    backdrop-filter: blur(18px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(155%) !important;
+  }
+}
+
+/* Respect users who request reduced transparency. */
+@media (prefers-reduced-transparency: reduce) {
+  .topnav,
+  .card,
+  .skill-card,
+  .timeline-card,
+  .project-card,
+  .certificate-card,
+  .contact-box,
+  #coursework .course-item,
+  .hero .role-strip,
+  .btn:not(.primary),
+  .quick-facts span,
+  .floating-chip {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
