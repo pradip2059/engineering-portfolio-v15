@@ -1584,16 +1584,40 @@ html[data-theme="light"] #projects.section.alt {
 
 
 /* =========================================================
-   V18.7.7 TEST — Certificates / Contact native alternation
-   Certificates = normal section
-   Contact      = native .section.alt
-   No custom theme colors: reuse the exact site-wide light/dark alternation.
+   V18.7.8 TEST — Contact uses EXACT existing alternate-band colors
+   Copied verbatim from About / Coursework / Projects.
    ========================================================= */
-#contact.section.alt.contact{
-  background-color:var(--section-alt) !important;
+
+/* Default / dark theme — exact existing alternate-band values */
+#contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(30,78,132,.34) 0%,
+      rgba(22,62,109,.27) 52%,
+      rgba(34,88,146,.31) 100%) !important;
+  border-top:1px solid rgba(95,170,255,.17) !important;
+  border-bottom:1px solid rgba(95,170,255,.17) !important;
+  backdrop-filter:blur(5px) saturate(115%) !important;
+  -webkit-backdrop-filter:blur(5px) saturate(115%) !important;
 }
-/* If the Contact component paints its own decorative layer across the whole section,
-   suppress only that layer; the inner contact card remains unchanged. */
-#contact.section.alt.contact::before{
-  display:none !important;
+
+/* Light theme — exact existing alternate-band values */
+html[data-theme="light"] #contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(187,220,255,.36),
+      rgba(217,236,255,.26)) !important;
+  border-top-color:rgba(67,132,216,.16) !important;
+  border-bottom-color:rgba(67,132,216,.16) !important;
+}
+
+/* Explicit dark selector for theme switching after page load */
+html[data-theme="dark"] #contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(30,78,132,.34) 0%,
+      rgba(22,62,109,.27) 52%,
+      rgba(34,88,146,.31) 100%) !important;
+  border-top-color:rgba(95,170,255,.17) !important;
+  border-bottom-color:rgba(95,170,255,.17) !important;
 }
