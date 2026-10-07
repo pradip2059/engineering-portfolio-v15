@@ -1516,12 +1516,68 @@ html[data-theme="light"] #projects.section.alt {
 .course-domains{display:grid;gap:14px}.course-domain{overflow:hidden;border:1px solid var(--border);border-radius:18px;background:linear-gradient(145deg,rgba(14,37,68,.72),rgba(8,24,48,.66));box-shadow:var(--shadow);backdrop-filter:blur(16px);transition:border-color .28s ease,box-shadow .28s ease}.course-domain.is-open{border-color:rgba(76,145,255,.30);box-shadow:var(--shadow),0 0 30px rgba(50,120,255,.06)}.course-domain-summary{width:100%;min-height:78px;display:flex;align-items:center;justify-content:space-between;padding:17px 21px;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit;-webkit-tap-highlight-color:transparent}.course-domain-summary span{display:flex;align-items:baseline;gap:12px}.course-domain-summary b{font-size:1.04rem}.course-domain-summary small{color:var(--muted);font-size:.78rem}.course-domain-summary i{color:var(--accent);transition:transform 520ms cubic-bezier(.16,1,.3,1)}.course-domain.is-open .course-domain-summary i{transform:rotate(180deg)}.course-domain-panel{height:0;opacity:0;overflow:hidden;will-change:height,opacity;transition:height 580ms cubic-bezier(.16,1,.3,1),opacity 320ms ease}.course-domain-inner{padding:0 18px 18px;transform:translateY(-10px);transition:transform 580ms cubic-bezier(.16,1,.3,1)}.course-domain.is-open .course-domain-inner{transform:translateY(0)}.course-domain .course-grid{margin:0}.course-domain .course-item{margin:0}@media(max-width:700px){.course-domains{gap:11px}.course-domain{border-radius:16px}.course-domain-summary{min-height:70px;padding:14px 15px}.course-domain-summary span{display:grid;gap:3px}.course-domain-inner{padding:0 13px 13px}}@media(prefers-reduced-motion:reduce){.course-domain-panel,.course-domain-inner,.course-domain-summary i{transition:none!important}}
 
 
-/* V18.7.2 FIX2 — restore visible alternating background at Certificates → Contact */
-html body #contact.section.alt,
-html body #contact.alt{
-  background: rgba(18, 38, 76, .48) !important;
-  background-image:
-    radial-gradient(circle at 82% 28%, rgba(50, 111, 220, .10), transparent 36%),
-    linear-gradient(180deg, rgba(19, 40, 80, .46), rgba(16, 34, 69, .50)) !important;
-  border-top: 1px solid rgba(91, 145, 236, .13) !important;
+
+
+/* =========================================================
+   V18.7.5 TEST — Managed Coursework theme parity
+   Uses theme variables instead of dark-only literal fills.
+   ========================================================= */
+.course-domain{
+  background:var(--card) !important;
+  border-color:var(--border) !important;
+  color:var(--text) !important;
+  box-shadow:var(--shadow) !important;
+}
+.course-domain-summary{
+  color:var(--text) !important;
+  background:transparent !important;
+}
+.course-domain-title,
+.course-domain-title strong{
+  color:var(--text) !important;
+}
+.course-domain-count,
+.course-domain-summary small{
+  color:var(--muted) !important;
+}
+.course-domain-chevron,
+.course-domain-summary i{
+  color:var(--accent) !important;
+}
+.course-domain.is-open{
+  background:var(--card) !important;
+  border-color:rgba(58,128,255,.28) !important;
+}
+.course-domain-panel{
+  background:transparent !important;
+}
+
+/* Light mode: match the same pale glass cards used throughout the site. */
+[data-theme="light"] .course-domain{
+  background:rgba(255,255,255,.64) !important;
+  border-color:rgba(27,64,126,.12) !important;
+  box-shadow:0 16px 38px rgba(32,72,130,.10) !important;
+}
+[data-theme="light"] .course-domain:hover,
+[data-theme="light"] .course-domain.is-open{
+  background:rgba(255,255,255,.76) !important;
+  border-color:rgba(46,105,214,.22) !important;
+}
+[data-theme="light"] .course-domain-summary{
+  color:#101b33 !important;
+}
+[data-theme="light"] .course-domain-title,
+[data-theme="light"] .course-domain-title strong{
+  color:#101b33 !important;
+}
+[data-theme="light"] .course-domain-count,
+[data-theme="light"] .course-domain-summary small{
+  color:#6d7a91 !important;
+}
+
+/* Dark mode remains native V18 blue glass rather than being affected by light overrides. */
+[data-theme="dark"] .course-domain{
+  background:var(--card) !important;
+  border-color:var(--border) !important;
+  box-shadow:var(--shadow) !important;
 }
