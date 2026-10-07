@@ -1621,3 +1621,53 @@ html[data-theme="dark"] #contact.section.alt{
   border-top-color:rgba(95,170,255,.17) !important;
   border-bottom-color:rgba(95,170,255,.17) !important;
 }
+
+
+/* =========================================================
+   V18.7.9 TEST — UNIFORM SECTION ALTERNATION
+   Normal: Home / Skills / Experience / Certificates
+   Alt:    About / Coursework / Projects / Contact
+   Every alt section uses the SAME background in each theme.
+   ========================================================= */
+
+/* ---------- DARK MODE ---------- */
+html[data-theme="dark"] body #about.section.alt,
+html[data-theme="dark"] body #coursework.section.alt,
+html[data-theme="dark"] body #projects.section.alt,
+html[data-theme="dark"] body #contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(30,78,132,.34) 0%,
+      rgba(22,62,109,.27) 52%,
+      rgba(34,88,146,.31) 100%) !important;
+  border-top:1px solid rgba(95,170,255,.17) !important;
+  border-bottom:1px solid rgba(95,170,255,.17) !important;
+  backdrop-filter:blur(5px) saturate(115%) !important;
+  -webkit-backdrop-filter:blur(5px) saturate(115%) !important;
+}
+
+/* ---------- LIGHT MODE ---------- */
+html[data-theme="light"] body #about.section.alt,
+html[data-theme="light"] body #coursework.section.alt,
+html[data-theme="light"] body #projects.section.alt,
+html[data-theme="light"] body #contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(187,220,255,.36) 0%,
+      rgba(217,236,255,.26) 100%) !important;
+  border-top:1px solid rgba(67,132,216,.16) !important;
+  border-bottom:1px solid rgba(67,132,216,.16) !important;
+  backdrop-filter:blur(5px) saturate(115%) !important;
+  -webkit-backdrop-filter:blur(5px) saturate(115%) !important;
+}
+
+/* Prevent section-specific decorative layers from changing the perceived band color.
+   Inner cards/content remain untouched. */
+#about.section.alt::before,
+#coursework.section.alt::before,
+#projects.section.alt::before,
+#contact.section.alt::before{
+  background:transparent !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+}
