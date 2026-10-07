@@ -1927,3 +1927,82 @@ html[data-theme="light"] .course-domain.is-open{
   background:rgba(252,254,255,.74) !important;
   border-color:rgba(46,105,214,.22) !important;
 }
+
+
+/* =========================================================
+   V18.7.15 FINAL TEST — SOFTER PREMIUM GLASS LIGHT MODE
+   DARK MODE V18.7.13/14 REMAINS UNCHANGED.
+   ========================================================= */
+
+/* Slightly calmer fixed blue atmosphere behind both glass layers. */
+html[data-theme="light"] body{
+  background:#e5f1ff !important;
+  background-image:
+    radial-gradient(circle at 14% 10%, rgba(91,153,247,.20), transparent 34rem),
+    radial-gradient(circle at 86% 40%, rgba(128,181,250,.14), transparent 38rem),
+    radial-gradient(circle at 48% 88%, rgba(101,160,241,.10), transparent 40rem) !important;
+  background-attachment:fixed !important;
+}
+
+/* NORMAL — airy icy-white glass, slightly more transparent than V18.7.14. */
+html[data-theme="light"] body #home,
+html[data-theme="light"] body #skills.section,
+html[data-theme="light"] body #experience.section,
+html[data-theme="light"] body #certificates.section{
+  background:rgba(247,251,255,.55) !important;
+  background-image:
+    linear-gradient(135deg,
+      rgba(255,255,255,.18),
+      rgba(224,239,255,.07)) !important;
+  border-top-color:rgba(71,126,201,.075) !important;
+  border-bottom-color:rgba(71,126,201,.075) !important;
+  backdrop-filter:blur(28px) saturate(126%) !important;
+  -webkit-backdrop-filter:blur(28px) saturate(126%) !important;
+}
+
+/* ALTERNATE — closer to normal, but still visibly blue.
+   Lower saturation + lower opacity = softer boundary and more glass. */
+html[data-theme="light"] body #about.section.alt,
+html[data-theme="light"] body #coursework.section.alt,
+html[data-theme="light"] body #projects.section.alt,
+html[data-theme="light"] body #contact.section.alt{
+  background:rgba(204,226,253,.48) !important;
+  background-image:
+    linear-gradient(135deg,
+      rgba(245,250,255,.16) 0%,
+      rgba(177,211,252,.055) 100%) !important;
+  border-top:1px solid rgba(69,126,205,.105) !important;
+  border-bottom:1px solid rgba(69,126,205,.105) !important;
+  backdrop-filter:blur(30px) saturate(128%) !important;
+  -webkit-backdrop-filter:blur(30px) saturate(128%) !important;
+}
+
+/* Softer, broader bloom so the tint feels atmospheric rather than painted. */
+html[data-theme="light"] #about.section.alt::before,
+html[data-theme="light"] #coursework.section.alt::before,
+html[data-theme="light"] #projects.section.alt::before,
+html[data-theme="light"] #contact.section.alt::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:
+    radial-gradient(circle at 20% 48%, rgba(77,142,237,.055), transparent 39%),
+    radial-gradient(circle at 82% 50%, rgba(119,174,247,.040), transparent 36%) !important;
+}
+
+/* Coursework glass harmonized with the softer light-mode surfaces. */
+html[data-theme="light"] .course-domain{
+  background:rgba(252,254,255,.56) !important;
+  border-color:rgba(54,108,186,.115) !important;
+  box-shadow:0 16px 38px rgba(36,83,151,.075) !important;
+  backdrop-filter:blur(22px) saturate(118%) !important;
+  -webkit-backdrop-filter:blur(22px) saturate(118%) !important;
+}
+html[data-theme="light"] .course-domain:hover,
+html[data-theme="light"] .course-domain.is-open{
+  background:rgba(252,254,255,.68) !important;
+  border-color:rgba(46,105,214,.18) !important;
+}
