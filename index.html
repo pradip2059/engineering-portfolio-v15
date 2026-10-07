@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=19.2-obsidian-copper">
+  <link rel="stylesheet" href="styles.css?v=18.6.6-certificate-spacing">
   <script>
     (function(){
       const saved=localStorage.getItem('v15-theme');
@@ -69,8 +69,8 @@
     <div class="hero-copy reveal">
       <p class="kicker">HELLO, I'M</p>
       <h1>Pradip <span>Sapkota</span></h1>
-      <div class="role-strip">COMPUTER ENGINEER / SYSTEMS BUILDER</div>
-      <p class="hero-editorial">Controls. Embedded. Hardware.<br><em>Built to work together.</em></p><p class="hero-text">Computer Engineering senior designing and validating real systems across firmware, electronics, industrial automation, and hardware–software integration.</p>
+      <div class="role-strip">Computer Engineer <b>•</b> Controls <b>•</b> Embedded <b>•</b> Hardware</div>
+      <p class="hero-text">Computer Engineering senior with a 3.7 GPA and expected graduation in December 2026. I build and test systems across embedded firmware, electronics, industrial controls, automation, and hardware–software integration.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#projects">View Projects</a>
         <a class="btn" href="resume.pdf" target="_blank">View Resume</a>
@@ -78,62 +78,53 @@
       </div>
       <div class="quick-facts"><span>GPA 3.7/4.0</span><span>Dec. 2026</span><span>Mankato, MN</span></div>
     </div>
-    <div class="hero-visual reveal editorial-portrait">
-      <div class="portrait-number">01</div>
+    <div class="hero-visual reveal">
+      <div class="circuit circuit-a"></div><div class="circuit circuit-b"></div>
       <div class="portrait-frame"><img src="IMG_1389.jpg" alt="Pradip Sapkota"></div>
-      <div class="portrait-caption"><span>PRADIP SAPKOTA</span><small>MANKATO / MN</small></div>
-      <div class="spec-line s1"><b>FOCUS</b><span>CONTROL SYSTEMS</span></div>
-      <div class="spec-line s2"><b>STACK</b><span>STM32 / PLC / PCB</span></div>
-      <div class="spec-line s3"><b>STATUS</b><span>DEC 2026</span></div>
+      <div class="floating-chip chip-1">STM32</div><div class="floating-chip chip-2">PLC / HMI</div>
+      <div class="floating-chip chip-3">PCB</div><div class="floating-chip chip-4">C/C++</div>
     </div>
   </div>
 </section>
 
 <section id="about" class="section alt">
-  <div class="section-head reveal"><p class="kicker">01 / PROFILE</p><h2>Engineering across hardware and software</h2></div>
+  <div class="section-head reveal"><p class="kicker">ABOUT</p><h2>Engineering across hardware and software</h2></div>
   <div class="two-col">
     <article class="card reveal"><h3>About Me</h3><p>I am Pradip Sapkota, a Computer Engineering senior at Minnesota State University, Mankato. My engineering interests span controls and automation, electrical hardware and test, embedded software/firmware, and robotics. I enjoy work that connects software with physical systems—from microcontrollers and PCBs to PLC-based monitoring and system validation.</p></article>
     <article class="card reveal"><h3>Education</h3><p><strong>B.S. Computer Engineering</strong><br>Minnesota State University, Mankato</p><p>Minor: Mathematics<br>GPA: <strong>3.7/4.0</strong><br>Expected Graduation: <strong>December 2026</strong></p></article>
   </div>
 </section>
 
-<section id="skills" class="section editorial-skills">
-  <div class="section-head reveal"><p class="kicker">02 / CAPABILITIES</p><h2>Engineering, not keyword collecting.</h2><p>Four technical layers that connect the physical system to software and validation.</p></div>
-  <div class="capability-index">
-    <article class="cap-row reveal"><span>01</span><h3>Controls &amp; Automation</h3><p>PLC · HMI · SCADA · PID · Modbus TCP · VFDs · Industrial Monitoring</p><i class="fas fa-arrow-right"></i></article>
-    <article class="cap-row reveal"><span>02</span><h3>Embedded Systems</h3><p>STM32 · Raspberry Pi · FPGA · GPIO · ADC/DAC · PWM · DMA · UART · SPI · I2C</p><i class="fas fa-arrow-right"></i></article>
-    <article class="cap-row reveal"><span>03</span><h3>Hardware &amp; Electronics</h3><p>PCB Design · KiCad · EAGLE · Sensors · Digital Logic · AutoCAD · SolidWorks · ModelSim</p><i class="fas fa-arrow-right"></i></article>
-    <article class="cap-row reveal"><span>04</span><h3>Software &amp; Validation</h3><p>C/C++ · Python · MATLAB · Linux · Git/GitHub · Automated Testing · AWS · React</p><i class="fas fa-arrow-right"></i></article>
+<section id="skills" class="section">
+  <div class="section-head reveal"><p class="kicker">TECHNICAL SKILLS</p><h2>Tools I use to build, test, and debug</h2></div>
+  <div class="skill-grid">
+    <article class="card reveal"><i class="fas fa-code"></i><h3>Programming</h3><p>C, C++, Python, MATLAB, SystemVerilog, VHDL, Java, SQL, Ladder Logic</p></article>
+    <article class="card reveal"><i class="fas fa-microchip"></i><h3>Embedded & Hardware</h3><p>STM32, Raspberry Pi, FPGA, microcontrollers, GPIO, ADC/DAC, PWM, timers, interrupts, DMA, sensors, digital logic</p></article>
+    <article class="card reveal"><i class="fas fa-gears"></i><h3>Controls & Automation</h3><p>PLC, HMI, SCADA, PID control, Modbus TCP, VFDs, industrial monitoring</p></article>
+    <article class="card reveal"><i class="fas fa-network-wired"></i><h3>Protocols & Interfaces</h3><p>I2C, SPI, UART, TCP/IP, JSON, IoT</p></article>
+    <article class="card reveal"><i class="fas fa-screwdriver-wrench"></i><h3>Engineering & PCB Tools</h3><p>KiCad, Autodesk EAGLE, AutoCAD, SolidWorks, ModelSim, oscilloscope, spectrum analyzer</p></article>
+    <article class="card reveal"><i class="fas fa-terminal"></i><h3>Systems & Software</h3><p>Linux, Git/GitHub, React.js, AWS Lambda, DynamoDB, API Gateway, Visual Studio, Azure DevOps</p></article>
   </div>
 </section>
 
 
-<section id="coursework" class="section alt">
-  <div class="section-head reveal">
-    <p class="kicker">03 / FOUNDATION</p>
-    <h2>Relevant courses taken</h2>
-    <p>Computer engineering, embedded systems, electronics, controls, communications, mathematics, and computing coursework.</p>
-  </div>
-  <div class="course-grid">
-    <div class="course-item reveal"><strong>EE 281</strong><span>Digital Systems Design/Test</span></div>
-    <div class="course-item reveal"><strong>EE 282</strong><span>Digital Systems Design Lab</span></div>
-    <div class="course-item reveal"><strong>EE 234</strong><span>Microprocessor Engineering I</span></div>
-    <div class="course-item reveal"><strong>EE 334</strong><span>Microprocessor Engineering II</span></div>
-    <div class="course-item reveal"><strong>EE 245</strong><span>Robotics Programming</span></div>
-    <div class="course-item reveal"><strong>EE 332</strong><span>Electronics I</span></div>
-    <div class="course-item reveal"><strong>EE 341</strong><span>Signals &amp; Systems</span></div>
-    <div class="course-item reveal"><strong>EE 358</strong><span>Control Systems</span></div>
-    <div class="course-item reveal"><strong>EE 368</strong><span>Control Systems Lab</span></div>
-    <div class="course-item reveal"><strong>EE 390</strong><span>Smart Sensor Systems</span></div>
-    <div class="course-item reveal"><strong>EE 395</strong><span>Computer Hardware &amp; Organization</span></div>
-    <div class="course-item reveal"><strong>EE 353</strong><span>Communication Systems Engineering</span></div>
-    <div class="course-item reveal"><strong>EE 489</strong><span>Real-Time Embedded Systems</span></div>
-    <div class="course-item reveal"><strong>EE 498</strong><span>Topics: Operating Systems for Heterogeneous Systems</span></div>
+<section id="coursework" class="section alt v1872-coursework">
+  <div class="section-head reveal"><p class="kicker">COURSEWORK</p><h2>Engineering foundation</h2><p>Explore relevant coursework by engineering area.</p></div>
+  <div class="course-domains">
+    <div class="course-domain reveal is-open"><button class="course-domain-summary" type="button" aria-expanded="true"><span><b>Embedded &amp; Digital</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+      <div class="course-item"><strong>EE 281</strong><span>Digital Systems Design/Test</span></div><div class="course-item"><strong>EE 282</strong><span>Digital Systems Design Lab</span></div><div class="course-item"><strong>EE 234</strong><span>Microprocessor Engineering I</span></div><div class="course-item"><strong>EE 334</strong><span>Microprocessor Engineering II</span></div><div class="course-item"><strong>EE 489</strong><span>Real-Time Embedded Systems</span></div>
+    </div></div></div></div>
+    <div class="course-domain reveal"><button class="course-domain-summary" type="button" aria-expanded="false"><span><b>Controls &amp; Signals</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+      <div class="course-item"><strong>EE 341</strong><span>Signals &amp; Systems</span></div><div class="course-item"><strong>EE 358</strong><span>Control Systems</span></div><div class="course-item"><strong>EE 368</strong><span>Control Systems Lab</span></div><div class="course-item"><strong>EE 390</strong><span>Smart Sensor Systems</span></div><div class="course-item"><strong>EE 353</strong><span>Communication Systems Engineering</span></div>
+    </div></div></div></div>
+    <div class="course-domain reveal"><button class="course-domain-summary" type="button" aria-expanded="false"><span><b>Computer Engineering</b><small>4 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+      <div class="course-item"><strong>EE 245</strong><span>Robotics Programming</span></div><div class="course-item"><strong>EE 332</strong><span>Electronics I</span></div><div class="course-item"><strong>EE 395</strong><span>Computer Hardware &amp; Organization</span></div><div class="course-item"><strong>EE 498</strong><span>Topics: Operating Systems for Heterogeneous Systems</span></div>
+    </div></div></div></div>
   </div>
 </section>
 
 <section id="experience" class="section">
-  <div class="section-head reveal"><p class="kicker">05 / EXPERIENCE</p><h2>Professional and research experience</h2></div>
+  <div class="section-head reveal"><p class="kicker">EXPERIENCE</p><h2>Professional and research experience</h2></div>
   <div class="timeline">
     <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>IT Solutions Consultant</h3><p class="company">Minnesota State University, Mankato</p></div><span>Jan. 2024 – Present</span></div><ul><li>Diagnose hardware, software, network, authentication, and system-integration failures across major desktop and mobile platforms.</li><li>Perform root-cause analysis and support system configuration, validation, documentation, and technical incident resolution.</li><li>Resolved 50+ technical incidents involving endpoints, connectivity, permissions, and enterprise applications.</li></ul></div></article>
     <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Engineering Associate — Software, Controls &amp; Hardware</h3><p class="company">Ruppell Inc.</p></div><span>Jul. 2025 – Aug. 2026</span></div><ul><li>Contributed to PLC system design and integrated-circuit selection for industrial applications, and performed hardware functional testing to verify system operation.</li><li>Developed sensor-monitoring dashboards using React and AWS, improving data-processing and API performance by 40% through Python workflows and backend optimization.</li><li>Supported hardware–software integration, requirements review, functional testing, troubleshooting, and defect resolution across industrial systems.</li></ul></div></article>
@@ -144,7 +135,7 @@
 </section>
 
 <section id="projects" class="section alt">
-  <div class="section-head reveal"><p class="kicker">04 / SELECTED WORK</p><h2>Selected engineering work</h2><p>Controls, embedded firmware, PCB/hardware design, AI integration, and robotics.</p></div>
+  <div class="section-head reveal"><p class="kicker">PROJECTS</p><h2>Selected engineering work</h2><p>Controls, embedded firmware, PCB/hardware design, AI integration, and robotics.</p></div>
   <div class="project-grid project-independent-columns">
   <div class="project-column project-column-left">
 <article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand Industrial Pump Station Control & Monitoring Simulation project details"><div class="project-icon"><i class="fas fa-industry"></i></div><p class="tag">Controls & Automation</p><h3>Industrial Pump Station Control & Monitoring Simulation</h3><div class="badges"><span>PLC</span><span>HMI/SCADA</span><span>PID</span><span>VFD</span><span>Python</span><span>Modbus TCP</span></div><ul><li>Modeled multi-pump control with lead/lag sequencing, PID pressure regulation, VFD commands, and automatic pump rotation.</li><li>Designed simulated HMI/SCADA views for pressure, flow, tank level, equipment status, alarms, and operating modes.</li><li>Simulated fault handling and pump failover with Python and Modbus TCP data acquisition.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/industrial_pump_station_monitor" target="_blank" rel="noopener noreferrer" aria-label="View Industrial Pump Station Control & Monitoring Simulation on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
@@ -161,16 +152,16 @@
 </section>
 
 <section id="certificates" class="section">
-  <div class="section-head reveal"><p class="kicker">06 / CREDENTIALS</p><h2>Verified technical credentials</h2></div>
+  <div class="section-head reveal"><p class="kicker">CERTIFICATES</p><h2>Continuing technical learning</h2></div>
   <article class="certificate-card reveal">
     <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
     <div><p class="tag">LinkedIn Learning</p><h3>Learning SCADA: Collect, Analyze, and Visualize Data for Industrial Automation</h3><p>Completed Sep. 29, 2026 • 2 hours 19 minutes</p><div class="badges"><span>Industrial Automation</span><span>SCADA</span></div></div>
-    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/10552c49134aebab9cf265e421c9ca5b13c250cab05425649795c24a77196c36?trk=share_certificate" target="_blank">Verify on LinkedIn ↗</a>
+    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/10552c49134aebab9cf265e421c9ca5b13c250cab05425649795c24a77196c36?trk=share_certificate" target="_blank">View Certificate</a>
   </article>
 <article class="certificate-card reveal">
     <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
     <div><p class="tag">LinkedIn Learning</p><h3>Cert Prep: Revit for Electrical Design Professional</h3><p>Completed Oct. 2, 2026 • 2 hours 11 minutes</p><div class="badges"><span>Electrical Design</span><span>Revit</span></div></div>
-    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/2ea7eed7319e2705ff78479960bd3e5cf45b37ad9e2b42a037e4415e48cc67e8?trk=share_certificate" target="_blank">Verify on LinkedIn ↗</a>
+    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/2ea7eed7319e2705ff78479960bd3e5cf45b37ad9e2b42a037e4415e48cc67e8?trk=share_certificate" target="_blank">View Certificate</a>
   </article>
 </section>
 
@@ -181,4 +172,7 @@
 </main>
 <footer><p>© 2026 Pradip Sapkota • Computer Engineering Portfolio</p></footer>
 <script src="script.js?v=18.5.3-top-arrow"></script>
+<script>
+(()=>{const groups=[...document.querySelectorAll('.course-domain')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;function init(g){const p=g.querySelector('.course-domain-panel'),o=g.classList.contains('is-open');p.style.height=o?'auto':'0px';p.style.opacity=o?'1':'0';}function toggle(g){const p=g.querySelector('.course-domain-panel'),btn=g.querySelector('.course-domain-summary'),opening=!g.classList.contains('is-open');if(reduce){g.classList.toggle('is-open',opening);btn.setAttribute('aria-expanded',opening);p.style.height=opening?'auto':'0px';p.style.opacity=opening?'1':'0';return;}const from=p.getBoundingClientRect().height;p.style.height=from+'px';p.offsetHeight;g.classList.toggle('is-open',opening);btn.setAttribute('aria-expanded',opening);const to=opening?p.scrollHeight:0;p.style.height=to+'px';p.style.opacity=opening?'1':'0';const done=e=>{if(e.propertyName!=='height')return;p.removeEventListener('transitionend',done);p.style.height=opening?'auto':'0px';};p.addEventListener('transitionend',done);}groups.forEach(g=>{init(g);g.querySelector('.course-domain-summary').addEventListener('click',()=>toggle(g));});})();
+</script>
 </body></html>
