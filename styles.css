@@ -1817,3 +1817,54 @@ html[data-theme="light"] body #contact.section.alt{
   position:relative;
   z-index:1;
 }
+
+
+/* =========================================================
+   V18.7.12 TEST — DARK MODE RESTORED TO DEV-STYLE LOOK
+   LIGHT MODE FROM V18.7.11 IS INTENTIONALLY UNCHANGED.
+   ========================================================= */
+
+html[data-theme="dark"] body{
+  background:#0a1426 !important;
+  background-image:
+    linear-gradient(180deg,#101d35 0%,#0b1629 44%,#08111f 100%) !important;
+  background-attachment:scroll !important;
+}
+
+/* DEV-style dark normal sections */
+html[data-theme="dark"] body #home,
+html[data-theme="dark"] body #skills.section,
+html[data-theme="dark"] body #experience.section,
+html[data-theme="dark"] body #certificates.section{
+  background:linear-gradient(135deg,
+    rgba(15,29,53,.96) 0%,
+    rgba(10,22,42,.96) 55%,
+    rgba(8,18,34,.97) 100%) !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* DEV-style dark alternate bands: blue, but restrained and solid-looking */
+html[data-theme="dark"] body #about.section.alt,
+html[data-theme="dark"] body #coursework.section.alt,
+html[data-theme="dark"] body #projects.section.alt,
+html[data-theme="dark"] body #contact.section.alt{
+  background:linear-gradient(135deg,
+    rgba(21,48,87,.96) 0%,
+    rgba(16,39,73,.95) 52%,
+    rgba(18,45,82,.96) 100%) !important;
+  border-top:1px solid rgba(83,135,224,.12) !important;
+  border-bottom:1px solid rgba(83,135,224,.12) !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* Remove the V18.7.11 section glow in DARK MODE only.
+   Light mode keeps the approved blue-glass glow exactly as-is. */
+html[data-theme="dark"] #about.section.alt::before,
+html[data-theme="dark"] #coursework.section.alt::before,
+html[data-theme="dark"] #projects.section.alt::before,
+html[data-theme="dark"] #contact.section.alt::before{
+  background:none !important;
+  opacity:0 !important;
+}
