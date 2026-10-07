@@ -1848,3 +1848,82 @@ html[data-theme="dark"] #contact.section.alt::before{
   background:none !important;
   opacity:0 !important;
 }
+
+
+/* =========================================================
+   V18.7.14 TEST — PREMIUM BLUE-GLASS LIGHT MODE
+   DARK MODE V18.7.13 IS UNCHANGED.
+   ========================================================= */
+
+/* Fixed atmospheric canvas behind every transparent light-mode section. */
+html[data-theme="light"] body{
+  background:#dfeeff !important;
+  background-image:
+    radial-gradient(circle at 14% 10%, rgba(84,151,255,.24), transparent 32rem),
+    radial-gradient(circle at 86% 38%, rgba(121,178,255,.17), transparent 36rem),
+    radial-gradient(circle at 48% 88%, rgba(91,153,246,.12), transparent 38rem) !important;
+  background-attachment:fixed !important;
+}
+
+/* Normal pages: still visually "white", but now cool-blue transparent glass. */
+html[data-theme="light"] body #home,
+html[data-theme="light"] body #skills.section,
+html[data-theme="light"] body #experience.section,
+html[data-theme="light"] body #certificates.section{
+  background:rgba(244,249,255,.66) !important;
+  background-image:
+    linear-gradient(135deg,
+      rgba(255,255,255,.23),
+      rgba(224,239,255,.10)) !important;
+  border-top-color:rgba(72,127,203,.09) !important;
+  border-bottom-color:rgba(72,127,203,.09) !important;
+  backdrop-filter:blur(24px) saturate(128%) !important;
+  -webkit-backdrop-filter:blur(24px) saturate(128%) !important;
+}
+
+/* Alternate pages: a clearer blue-glass sheet, not an opaque blue block. */
+html[data-theme="light"] body #about.section.alt,
+html[data-theme="light"] body #coursework.section.alt,
+html[data-theme="light"] body #projects.section.alt,
+html[data-theme="light"] body #contact.section.alt{
+  background:rgba(174,210,255,.48) !important;
+  background-image:
+    linear-gradient(135deg,
+      rgba(229,242,255,.20) 0%,
+      rgba(150,196,255,.08) 100%) !important;
+  border-top:1px solid rgba(65,124,207,.16) !important;
+  border-bottom:1px solid rgba(65,124,207,.16) !important;
+  backdrop-filter:blur(26px) saturate(132%) !important;
+  -webkit-backdrop-filter:blur(26px) saturate(132%) !important;
+}
+
+/* Restrained blue bloom under the glass. Same treatment on every alt section. */
+html[data-theme="light"] #about.section.alt::before,
+html[data-theme="light"] #coursework.section.alt::before,
+html[data-theme="light"] #projects.section.alt::before,
+html[data-theme="light"] #contact.section.alt::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:
+    radial-gradient(circle at 18% 48%, rgba(67,136,246,.095), transparent 34%),
+    radial-gradient(circle at 82% 52%, rgba(115,174,255,.065), transparent 31%) !important;
+}
+
+/* Preserve the managed-coursework cards, but make their LIGHT treatment
+   fit the stronger glass environment. */
+html[data-theme="light"] .course-domain{
+  background:rgba(250,253,255,.62) !important;
+  border-color:rgba(50,105,188,.14) !important;
+  box-shadow:0 16px 38px rgba(36,83,151,.09) !important;
+  backdrop-filter:blur(18px) saturate(120%) !important;
+  -webkit-backdrop-filter:blur(18px) saturate(120%) !important;
+}
+html[data-theme="light"] .course-domain:hover,
+html[data-theme="light"] .course-domain.is-open{
+  background:rgba(252,254,255,.74) !important;
+  border-color:rgba(46,105,214,.22) !important;
+}
