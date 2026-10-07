@@ -1671,3 +1671,67 @@ html[data-theme="light"] body #contact.section.alt{
   opacity:0 !important;
   pointer-events:none !important;
 }
+
+
+/* =========================================================
+   V18.7.10 FINAL FIX TEST — OPAQUE UNIFORM SECTION SYSTEM
+   Prevent vertical page-gradient bleed-through.
+   ========================================================= */
+
+/* LIGHT MODE — exact solid surfaces */
+html[data-theme="light"] body #home,
+html[data-theme="light"] body #skills.section,
+html[data-theme="light"] body #experience.section,
+html[data-theme="light"] body #certificates.section{
+  background:#f3f7ff !important;
+  background-image:none !important;
+}
+
+html[data-theme="light"] body #about.section.alt,
+html[data-theme="light"] body #coursework.section.alt,
+html[data-theme="light"] body #projects.section.alt,
+html[data-theme="light"] body #contact.section.alt{
+  background:#dbeaff !important;
+  background-image:none !important;
+  border-top:1px solid #c4daf8 !important;
+  border-bottom:1px solid #c4daf8 !important;
+}
+
+/* DARK MODE — exact solid surfaces */
+html[data-theme="dark"] body #home,
+html[data-theme="dark"] body #skills.section,
+html[data-theme="dark"] body #experience.section,
+html[data-theme="dark"] body #certificates.section{
+  background:#0c1629 !important;
+  background-image:none !important;
+}
+
+html[data-theme="dark"] body #about.section.alt,
+html[data-theme="dark"] body #coursework.section.alt,
+html[data-theme="dark"] body #projects.section.alt,
+html[data-theme="dark"] body #contact.section.alt{
+  background:#102846 !important;
+  background-image:none !important;
+  border-top:1px solid #1d4776 !important;
+  border-bottom:1px solid #1d4776 !important;
+}
+
+/* Kill full-section decorative overlays that can re-tint a band.
+   This does NOT affect inner cards, project cards, contact box, etc. */
+#about.section.alt::before,
+#coursework.section.alt::before,
+#projects.section.alt::before,
+#contact.section.alt::before{
+  background:none !important;
+  background-image:none !important;
+  opacity:0 !important;
+}
+
+/* Keep section content above any legacy decorative layers. */
+#about.section.alt > *,
+#coursework.section.alt > *,
+#projects.section.alt > *,
+#contact.section.alt > *{
+  position:relative;
+  z-index:1;
+}
