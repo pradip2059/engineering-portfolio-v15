@@ -1732,13 +1732,7 @@ html[data-theme="dark"] body #contact.section.alt{
    ========================================================= */
 
 /* Lock a single page canvas so transparency looks identical at every scroll position. */
-html[data-theme="dark"] body{
-  background:#080f1d !important;
-  background-image:
-    radial-gradient(circle at 18% 16%, rgba(40,112,255,.16), transparent 31rem),
-    radial-gradient(circle at 82% 70%, rgba(38,124,255,.12), transparent 34rem) !important;
-  background-attachment:fixed !important;
-}
+
 html[data-theme="light"] body{
   background:#edf5ff !important;
   background-image:
@@ -1748,15 +1742,7 @@ html[data-theme="light"] body{
 }
 
 /* NORMAL sections — very transparent glass */
-html[data-theme="dark"] body #home,
-html[data-theme="dark"] body #skills.section,
-html[data-theme="dark"] body #experience.section,
-html[data-theme="dark"] body #certificates.section{
-  background:rgba(7,15,29,.54) !important;
-  background-image:none !important;
-  backdrop-filter:blur(18px) saturate(118%) !important;
-  -webkit-backdrop-filter:blur(18px) saturate(118%) !important;
-}
+
 
 html[data-theme="light"] body #home,
 html[data-theme="light"] body #skills.section,
@@ -1769,18 +1755,7 @@ html[data-theme="light"] body #certificates.section{
 }
 
 /* ALTERNATE sections — same glass, with a richer blue tint */
-html[data-theme="dark"] body #about.section.alt,
-html[data-theme="dark"] body #coursework.section.alt,
-html[data-theme="dark"] body #projects.section.alt,
-html[data-theme="dark"] body #contact.section.alt{
-  background:rgba(22,61,111,.34) !important;
-  background-image:
-    radial-gradient(circle at 22% 48%, rgba(48,123,255,.10), transparent 38%) !important;
-  border-top:1px solid rgba(111,174,255,.16) !important;
-  border-bottom:1px solid rgba(111,174,255,.16) !important;
-  backdrop-filter:blur(22px) saturate(128%) !important;
-  -webkit-backdrop-filter:blur(22px) saturate(128%) !important;
-}
+
 
 html[data-theme="light"] body #about.section.alt,
 html[data-theme="light"] body #coursework.section.alt,
@@ -1820,47 +1795,52 @@ html[data-theme="light"] body #contact.section.alt{
 
 
 /* =========================================================
-   V18.7.12 TEST — DARK MODE RESTORED TO DEV-STYLE LOOK
-   LIGHT MODE FROM V18.7.11 IS INTENTIONALLY UNCHANGED.
+   V18.7.13 TEST — THEME SPLIT
+   DARK: original V18.7.3 DEV styling (no glass-system overrides)
+   LIGHT: approved V18.7.11 blue-glass styling
    ========================================================= */
 
-html[data-theme="dark"] body{
-  background:#0a1426 !important;
-  background-image:
-    linear-gradient(180deg,#101d35 0%,#0b1629 44%,#08111f 100%) !important;
-  background-attachment:scroll !important;
-}
-
-/* DEV-style dark normal sections */
+/* Ensure legacy V18.7.9/10 experiments cannot override the original DEV dark appearance. */
 html[data-theme="dark"] body #home,
 html[data-theme="dark"] body #skills.section,
 html[data-theme="dark"] body #experience.section,
-html[data-theme="dark"] body #certificates.section{
-  background:linear-gradient(135deg,
-    rgba(15,29,53,.96) 0%,
-    rgba(10,22,42,.96) 55%,
-    rgba(8,18,34,.97) 100%) !important;
-  backdrop-filter:none !important;
-  -webkit-backdrop-filter:none !important;
-}
-
-/* DEV-style dark alternate bands: blue, but restrained and solid-looking */
+html[data-theme="dark"] body #certificates.section,
 html[data-theme="dark"] body #about.section.alt,
 html[data-theme="dark"] body #coursework.section.alt,
 html[data-theme="dark"] body #projects.section.alt,
 html[data-theme="dark"] body #contact.section.alt{
-  background:linear-gradient(135deg,
-    rgba(21,48,87,.96) 0%,
-    rgba(16,39,73,.95) 52%,
-    rgba(18,45,82,.96) 100%) !important;
-  border-top:1px solid rgba(83,135,224,.12) !important;
-  border-bottom:1px solid rgba(83,135,224,.12) !important;
-  backdrop-filter:none !important;
-  -webkit-backdrop-filter:none !important;
+  background:unset !important;
+  background-image:unset !important;
+  backdrop-filter:unset !important;
+  -webkit-backdrop-filter:unset !important;
 }
 
-/* Remove the V18.7.11 section glow in DARK MODE only.
-   Light mode keeps the approved blue-glass glow exactly as-is. */
+/* Re-apply the original DEV alternating-band treatment in dark mode. */
+html[data-theme="dark"] body #about.section.alt,
+html[data-theme="dark"] body #coursework.section.alt,
+html[data-theme="dark"] body #projects.section.alt,
+html[data-theme="dark"] body #contact.section.alt{
+  background:
+    linear-gradient(135deg,
+      rgba(30,78,132,.34) 0%,
+      rgba(22,62,109,.27) 52%,
+      rgba(34,88,146,.31) 100%) !important;
+  border-top:1px solid rgba(95,170,255,.17) !important;
+  border-bottom:1px solid rgba(95,170,255,.17) !important;
+  backdrop-filter:blur(5px) saturate(115%) !important;
+  -webkit-backdrop-filter:blur(5px) saturate(115%) !important;
+}
+
+/* Original dark normal sections are transparent over the premium DEV canvas. */
+html[data-theme="dark"] body #home,
+html[data-theme="dark"] body #skills.section,
+html[data-theme="dark"] body #experience.section,
+html[data-theme="dark"] body #certificates.section{
+  background:transparent !important;
+  background-image:none !important;
+}
+
+/* Do not add the newer full-band glow to dark mode. */
 html[data-theme="dark"] #about.section.alt::before,
 html[data-theme="dark"] #coursework.section.alt::before,
 html[data-theme="dark"] #projects.section.alt::before,
