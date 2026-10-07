@@ -1584,29 +1584,16 @@ html[data-theme="light"] #projects.section.alt {
 
 
 /* =========================================================
-   V18.7.6 TEST — Contact exact alternating-section parity
-   Match the normal section transition, not a custom gradient.
+   V18.7.7 TEST — Certificates / Contact native alternation
+   Certificates = normal section
+   Contact      = native .section.alt
+   No custom theme colors: reuse the exact site-wide light/dark alternation.
    ========================================================= */
-
-/* Dark mode: exact normal alternate-section surface */
-html body #contact.section.contact.alt{
-  background:var(--surface-alt) !important;
-  background-image:none !important;
-  border-top:1px solid var(--border) !important;
+#contact.section.alt.contact{
+  background-color:var(--section-alt) !important;
 }
-
-/* Light mode: use the same subtle pale-blue alternate surface seen elsewhere. */
-html[data-theme="light"] body #contact.section.contact.alt,
-[data-theme="light"] body #contact.section.contact.alt{
-  background:rgba(231,239,252,.56) !important;
-  background-image:none !important;
-  border-top:1px solid rgba(62,113,201,.14) !important;
-}
-
-/* Dark-mode fallback matching the existing V18 palette. */
-html[data-theme="dark"] body #contact.section.contact.alt,
-[data-theme="dark"] body #contact.section.contact.alt{
-  background:rgba(12,29,57,.42) !important;
-  background-image:none !important;
-  border-top:1px solid rgba(83,135,224,.10) !important;
+/* If the Contact component paints its own decorative layer across the whole section,
+   suppress only that layer; the inner contact card remains unchanged. */
+#contact.section.alt.contact::before{
+  display:none !important;
 }
