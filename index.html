@@ -1,178 +1,82 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta name="robots" content="noindex, nofollow">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pradip Sapkota — Computer Engineering portfolio focused on controls and automation, embedded firmware, electrical hardware and test, and robotics.">
-  <title>Pradip Sapkota | Computer Engineer</title>
-  <meta name="author" content="Pradip Sapkota">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Pradip Sapkota | Computer Engineer">
-  <meta property="og:description" content="Computer Engineering portfolio focused on controls and automation, embedded firmware, electrical hardware and test, and robotics.">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="IMG_1389.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pradip Sapkota | Computer Engineer">
-  <meta name="twitter:description" content="Controls & Automation • Embedded Firmware • Electrical Hardware & Test • Robotics">
-
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=19.3-exact-cta-nav-blue">
-  <script>
-    (function(){
-      const saved=localStorage.getItem('v15-theme');
-      const preferred=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-      document.documentElement.setAttribute('data-theme',saved||preferred);
-    })();
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Pradip Sapkota",
-    "url": "",
-    "image": "IMG_1389.jpg",
-    "jobTitle": "Computer Engineering Student",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Minnesota State University, Mankato"
-    },
-    "sameAs": [
-      "https://github.com/pradip2059",
-      "https://www.linkedin.com/in/pradip-sapkota-8a93582b0/"
-    ]
-  }
-  </script>
-</head>
-<body>
-<nav class="topnav">
-  <div class="nav-inner">
-    <a class="brand" href="#home"><span class="brand-mark">PS</span><span>Pradip Sapkota</span></a>
-    <button class="menu-toggle" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
-    <div class="nav-links">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#coursework">Coursework</a>
-      <a href="#experience">Experience</a><a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a><a href="#contact">Contact</a>
-      <a class="resume-link" href="resume.pdf" target="_blank">Resume</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme"><i class="fas fa-moon"></i><span>Dark</span></button>
-    </div>
-  </div>
-</nav>
-
-<main>
-<section id="home" class="hero section">
-  <div class="hero-grid">
-    <div class="hero-copy reveal">
-      <p class="kicker">HELLO, I'M</p>
-      <h1>Pradip <span>Sapkota</span></h1>
-      <div class="role-strip">Computer Engineer <b>•</b> Controls <b>•</b> Embedded <b>•</b> Hardware</div>
-      <p class="hero-text">Computer Engineering senior with a 3.7 GPA and expected graduation in December 2026. I build and test systems across embedded firmware, electronics, industrial controls, automation, and hardware–software integration.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" href="resume.pdf" target="_blank">View Resume</a>
-        <a class="btn" href="mailto:pradipsapkota.ce@outlook.com">Contact Me</a>
-      </div>
-      <div class="quick-facts"><span>GPA 3.7/4.0</span><span>Dec. 2026</span><span>Mankato, MN</span></div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="circuit circuit-a"></div><div class="circuit circuit-b"></div>
-      <div class="portrait-frame"><img src="IMG_1389.jpg" alt="Pradip Sapkota"></div>
-      <div class="floating-chip chip-1">STM32</div><div class="floating-chip chip-2">PLC / HMI</div>
-      <div class="floating-chip chip-3">PCB</div><div class="floating-chip chip-4">C/C++</div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section alt">
-  <div class="section-head reveal"><p class="kicker">ABOUT</p><h2>Engineering across hardware and software</h2></div>
-  <div class="two-col">
-    <article class="card reveal"><h3>About Me</h3><p>I am Pradip Sapkota, a Computer Engineering senior at Minnesota State University, Mankato. My engineering interests span controls and automation, electrical hardware and test, embedded software/firmware, and robotics. I enjoy work that connects software with physical systems—from microcontrollers and PCBs to PLC-based monitoring and system validation.</p></article>
-    <article class="card reveal"><h3>Education</h3><p><strong>B.S. Computer Engineering</strong><br>Minnesota State University, Mankato</p><p>Minor: Mathematics<br>GPA: <strong>3.7/4.0</strong><br>Expected Graduation: <strong>December 2026</strong></p></article>
-  </div>
-</section>
-
-<section id="skills" class="section">
-  <div class="section-head reveal"><p class="kicker">TECHNICAL SKILLS</p><h2>Tools I use to build, test, and debug</h2></div>
-  <div class="skill-grid">
-    <article class="card reveal"><i class="fas fa-code"></i><h3>Programming</h3><p>C, C++, Python, MATLAB, SystemVerilog, VHDL, Java, SQL, Ladder Logic</p></article>
-    <article class="card reveal"><i class="fas fa-microchip"></i><h3>Embedded & Hardware</h3><p>STM32, Raspberry Pi, FPGA, microcontrollers, GPIO, ADC/DAC, PWM, timers, interrupts, DMA, sensors, digital logic</p></article>
-    <article class="card reveal"><i class="fas fa-gears"></i><h3>Controls & Automation</h3><p>PLC, HMI, SCADA, PID control, Modbus TCP, VFDs, industrial monitoring</p></article>
-    <article class="card reveal"><i class="fas fa-network-wired"></i><h3>Protocols & Interfaces</h3><p>I2C, SPI, UART, TCP/IP, JSON, IoT</p></article>
-    <article class="card reveal"><i class="fas fa-screwdriver-wrench"></i><h3>Engineering & PCB Tools</h3><p>KiCad, Autodesk EAGLE, AutoCAD, SolidWorks, ModelSim, oscilloscope, spectrum analyzer</p></article>
-    <article class="card reveal"><i class="fas fa-terminal"></i><h3>Systems & Software</h3><p>Linux, Git/GitHub, React.js, AWS Lambda, DynamoDB, API Gateway, Visual Studio, Azure DevOps</p></article>
-  </div>
-</section>
-
-
-<section id="coursework" class="section alt v1872-coursework">
-  <div class="section-head reveal"><p class="kicker">COURSEWORK</p><h2>Engineering foundation</h2><p>Explore relevant coursework by engineering area.</p></div>
-  <div class="course-domains">
-    <div class="course-domain reveal"><button class="course-domain-summary" type="button" aria-expanded="false"><span><b>Embedded &amp; Digital</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
-      <div class="course-item"><strong>EE 281</strong><span>Digital Systems Design/Test</span></div><div class="course-item"><strong>EE 282</strong><span>Digital Systems Design Lab</span></div><div class="course-item"><strong>EE 234</strong><span>Microprocessor Engineering I</span></div><div class="course-item"><strong>EE 334</strong><span>Microprocessor Engineering II</span></div><div class="course-item"><strong>EE 489</strong><span>Real-Time Embedded Systems</span></div>
-    </div></div></div></div>
-    <div class="course-domain reveal"><button class="course-domain-summary" type="button" aria-expanded="false"><span><b>Controls &amp; Signals</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
-      <div class="course-item"><strong>EE 341</strong><span>Signals &amp; Systems</span></div><div class="course-item"><strong>EE 358</strong><span>Control Systems</span></div><div class="course-item"><strong>EE 368</strong><span>Control Systems Lab</span></div><div class="course-item"><strong>EE 390</strong><span>Smart Sensor Systems</span></div><div class="course-item"><strong>EE 353</strong><span>Communication Systems Engineering</span></div>
-    </div></div></div></div>
-    <div class="course-domain reveal"><button class="course-domain-summary" type="button" aria-expanded="false"><span><b>Computer Engineering</b><small>4 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
-      <div class="course-item"><strong>EE 245</strong><span>Robotics Programming</span></div><div class="course-item"><strong>EE 332</strong><span>Electronics I</span></div><div class="course-item"><strong>EE 395</strong><span>Computer Hardware &amp; Organization</span></div><div class="course-item"><strong>EE 498</strong><span>Topics: Operating Systems for Heterogeneous Systems</span></div>
-    </div></div></div></div>
-  </div>
-</section>
-
-<section id="experience" class="section">
-  <div class="section-head reveal"><p class="kicker">EXPERIENCE</p><h2>Professional and research experience</h2></div>
-  <div class="timeline">
-    <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>IT Solutions Consultant</h3><p class="company">Minnesota State University, Mankato</p></div><span>Jan. 2024 – Present</span></div><ul><li>Diagnose hardware, software, network, authentication, and system-integration failures across major desktop and mobile platforms.</li><li>Perform root-cause analysis and support system configuration, validation, documentation, and technical incident resolution.</li><li>Resolved 50+ technical incidents involving endpoints, connectivity, permissions, and enterprise applications.</li></ul></div></article>
-    <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Engineering Associate — Software, Controls &amp; Hardware</h3><p class="company">Ruppell Inc.</p></div><span>Jul. 2025 – Aug. 2026</span></div><ul><li>Contributed to PLC system design and integrated-circuit selection for industrial applications, and performed hardware functional testing to verify system operation.</li><li>Developed sensor-monitoring dashboards using React and AWS, improving data-processing and API performance by 40% through Python workflows and backend optimization.</li><li>Supported hardware–software integration, requirements review, functional testing, troubleshooting, and defect resolution across industrial systems.</li></ul></div></article>
-    <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Undergraduate Research Assistant — FPGA & Digital Systems</h3><p class="company">Minnesota State University, Mankato</p></div><span>Jan. 2024 – May 2024</span></div><ul><li>Supported FPGA research involving VHDL-based digital hardware design, implementation, and verification.</li><li>Developed and simulated VHDL logic modules in ModelSim to verify functionality and identify design issues.</li><li>Assisted with FPGA testing, hardware/software debugging, technical research, and documentation.</li></ul></div></article>
-    <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Undergraduate Research Assistant — Edge-AI Digital Twin</h3><p class="company">Minnesota State University, Mankato</p></div><span>Aug. 2023 – Jan. 2024</span></div><ul><li>Supported digital-twin research integrating real-time sensor data, embedded computing, and cyber-physical system monitoring.</li><li>Assisted with Python development, data processing, testing, and technical research for intelligent control experiments.</li><li>Researched edge computing and predictive maintenance and contributed code, technical findings, and documentation.</li></ul></div></article>
-    <article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Student Manager</h3><p class="company">Sodexo — Minnesota State University, Mankato (UDC)</p></div><span>Aug. 2022 – Aug. 2023</span></div><ul><li>Maintained inventory records and tracked stock levels, sales, and orders using digital systems to support accurate day-to-day operations.</li><li>Troubleshot POS hardware and software issues to restore transaction processing and sales-reporting functionality.</li><li>Provided front-line technical assistance involving store equipment, software, and point-of-sale workflows.</li></ul></div></article>
-  </div>
-</section>
-
-<section id="projects" class="section alt">
-  <div class="section-head reveal"><p class="kicker">PROJECTS</p><h2>Selected engineering work</h2><p>Controls, embedded firmware, PCB/hardware design, AI integration, and robotics.</p></div>
-  <div class="project-grid project-independent-columns">
-  <div class="project-column project-column-left">
-<article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand Industrial Pump Station Control & Monitoring Simulation project details"><div class="project-icon"><i class="fas fa-industry"></i></div><p class="tag">Controls & Automation</p><h3>Industrial Pump Station Control & Monitoring Simulation</h3><div class="badges"><span>PLC</span><span>HMI/SCADA</span><span>PID</span><span>VFD</span><span>Python</span><span>Modbus TCP</span></div><ul><li>Modeled multi-pump control with lead/lag sequencing, PID pressure regulation, VFD commands, and automatic pump rotation.</li><li>Designed simulated HMI/SCADA views for pressure, flow, tank level, equipment status, alarms, and operating modes.</li><li>Simulated fault handling and pump failover with Python and Modbus TCP data acquisition.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/industrial_pump_station_monitor" target="_blank" rel="noopener noreferrer" aria-label="View Industrial Pump Station Control & Monitoring Simulation on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
-<article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand Smart Door Access Control System project details"><div class="project-icon"><i class="fas fa-door-closed"></i></div><p class="tag">PCB & Embedded Systems</p><h3>Smart Door Access Control System</h3><div class="badges"><span>KiCad</span><span>EAGLE</span><span>Embedded</span><span>Python</span><span>IoT</span></div><ul><li>Designed and fabricated a PCB for an embedded access-control system integrating electronic locks, sensors, hardware I/O, and authentication hardware.</li><li>Developed hardware–software control logic with sensor processing, anti-spoofing, fail-safe behavior, and reliability testing.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/smart_door_access_control" target="_blank" rel="noopener noreferrer" aria-label="View Smart Door Access Control System on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
-<article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand PlantPulse TestBench — Industrial Commissioning & Validation Framework project details"><div class="project-icon"><i class="fas fa-clipboard-check"></i></div><p class="tag">Test & Validation</p><h3>PlantPulse TestBench — Industrial Commissioning &amp; Validation Framework</h3><div class="badges"><span>Python</span><span>STM32</span><span>UART</span><span>Modbus TCP</span><span>YAML</span><span>Automated Testing</span></div><ul><li>Developed a hardware-agnostic test framework for automated commissioning and validation of embedded controllers and industrial control systems.</li><li>Built YAML-driven test plans with fault injection, telemetry analysis, response-time verification, and automated PASS/FAIL evaluation.</li><li>Implemented interchangeable simulator, STM32/UART, and Modbus TCP interfaces with machine-readable test reports and CI-based software validation.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/project_plantpluse" target="_blank" rel="noopener noreferrer" aria-label="View PlantPulse TestBench on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
-
-  </div>
-  <div class="project-column project-column-right">
-<article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand STM32 Motor Control & Condition Monitoring project details"><div class="project-icon"><i class="fas fa-microchip"></i></div><p class="tag">Embedded Firmware</p><h3>STM32 Motor Control & Condition Monitoring</h3><div class="badges"><span>C</span><span>STM32</span><span>UART</span><span>ADC</span><span>PWM</span><span>DMA</span></div><ul><li>Developed embedded C firmware for motor control and sensor acquisition using timers, PWM, ADC, interrupts, and DMA.</li><li>Implemented non-blocking UART telemetry for sensor data, operating states, and fault information.</li><li>Integrated fault-monitoring logic and performed hardware/firmware debugging.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/embedded_firmware_STM32_motor_control" target="_blank" rel="noopener noreferrer" aria-label="View STM32 Motor Control & Condition Monitoring on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
-<article class="project-card reveal expandable-project" tabindex="0" role="button" aria-expanded="false" aria-label="Expand Interactive AI Voice Assistant project details"><div class="project-icon"><i class="fas fa-microphone-lines"></i></div><p class="tag">PCB & AI Integration</p><h3>Interactive AI Voice Assistant</h3><div class="badges"><span>KiCad</span><span>EAGLE</span><span>Raspberry Pi</span><span>Python</span><span>GPIO</span></div><ul><li>Designed and fabricated a PCB supporting a Raspberry Pi voice-assistant system with audio and GPIO-controlled hardware.</li><li>Integrated speech recognition, text-to-speech, external AI services, and hardware indicators in Python.</li><li>Performed hardware–software integration and iterative debugging.</li></ul><span class="project-expand-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span><div class="project-repo-panel" aria-hidden="true"><div class="project-repo-inner"><a class="project-github-btn" href="https://github.com/pradip2059/smart_voice_assistant" target="_blank" rel="noopener noreferrer" aria-label="View Interactive AI Voice Assistant on GitHub"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
-<article class="project-card reveal"><div class="project-icon"><i class="fas fa-robot"></i></div><p class="tag">Robotics</p><h3>Robotic Engineering Project</h3><div class="badges"><span>C++</span><span>Robotics</span><span>Ultrasonic Sensors</span><span>Terminal UI</span></div><ul><li>Built an interactive terminal-based C++ game using keyboard input, real-time object movement, and collision/bounce behavior.</li><li>Developed a C++ image-to-character rendering program that transformed a digital photograph into a recognizable text-based representation using symbols and character patterns.</li><li>Programmed sensor-equipped mobile robots to navigate, perform coordinated motion routines, and record movement paths using ultrasonic sensing and iterative testing.</li></ul></article>
-  </div>
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="description" content="Pradip Sapkota — Computer Engineering portfolio: embedded systems, industrial controls, hardware and test."><title>Pradip Sapkota | Engineering Portfolio — V20 Concept</title><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="v20.css?v=20.0"></head><body><div class="top-accent"></div><header class="site-header"><a class="wordmark" href="#home"><span class="mark">P<span>✳</span>S</span><span>PRADIP<br>SAPKOTA</span></a><nav class="site-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#coursework">Coursework</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></nav><a class="header-cta" href="resume.pdf" target="_blank" rel="noopener">Résumé <i class="fas fa-arrow-up-right-from-square"></i></a><button class="mobile-menu" type="button" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button></header><main><section id="home" class="section v20-hero">
+ <div class="hero-topline"><span><i class="fas fa-circle-notch"></i> ENGINEERING PORTFOLIO / 2026</span><span>AVAILABLE FOR OPPORTUNITIES <i class="fas fa-arrow-up-right-from-square"></i></span></div>
+ <div class="hero-layout">
+ <div class="hero-intro"><p class="eyebrow">HELLO, I'M PRADIP.</p><h1>Building<br><em>what's</em><br>next<span class="period">.</span></h1><p class="hero-lede">Computer engineer working where embedded firmware, physical hardware, and intelligent controls meet.</p><div class="hero-actions"><a class="btn primary" href="#projects">Explore my work <i class="fas fa-arrow-up-right-from-square"></i></a><a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Download résumé <i class="fas fa-arrow-down"></i></a></div></div>
+ <div class="hero-portrait"><div class="portrait-glow"></div><img src="IMG_1389.jpg" alt="Portrait of Pradip Sapkota"><div class="portrait-caption"><span class="tiny-cross">✳</span><div><strong>PRADIP SAPKOTA</strong><small>Computer Engineering / Minnesota</small></div><span class="portrait-index">01 / 08</span></div></div>
+ <div class="hero-side"><span class="vertical-word">HARDWARE × SOFTWARE</span><div class="tech-lines"><span>01 <b>Embedded systems</b></span><span>02 <b>Industrial controls</b></span><span>03 <b>Test & validation</b></span></div></div>
+ </div><div class="hero-bottom"><span><i class="fas fa-arrow-down-long"></i> SCROLL TO EXPLORE</span><span>GPA 3.7 / 4.0 <b>✦</b> GRADUATING DEC 2026 <b>✦</b> MANKATO, MN</span></div>
+ </section><section class="section alt" id="about">
+<div class="section-watermark" aria-hidden="true">02</div>
+<div class="section-head reveal"><p class="kicker">ABOUT</p><h2>Engineering across hardware and software</h2></div>
+<div class="two-col">
+<article class="card reveal"><h3>About Me</h3><p>I am Pradip Sapkota, a Computer Engineering senior at Minnesota State University, Mankato. My engineering interests span controls and automation, electrical hardware and test, embedded software/firmware, and robotics. I enjoy work that connects software with physical systems—from microcontrollers and PCBs to PLC-based monitoring and system validation.</p></article>
+<article class="card reveal"><h3>Education</h3><p><strong>B.S. Computer Engineering</strong><br/>Minnesota State University, Mankato</p><p>Minor: Mathematics<br/>GPA: <strong>3.7/4.0</strong><br/>Expected Graduation: <strong>December 2026</strong></p></article>
 </div>
-</section>
-
-<section id="certificates" class="section">
-  <div class="section-head reveal"><p class="kicker">CERTIFICATES</p><h2>Continuing technical learning</h2></div>
-  <article class="certificate-card reveal">
-    <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
-    <div><p class="tag">LinkedIn Learning</p><h3>Learning SCADA: Collect, Analyze, and Visualize Data for Industrial Automation</h3><p>Completed Sep. 29, 2026 • 2 hours 19 minutes</p><div class="badges"><span>Industrial Automation</span><span>SCADA</span></div></div>
-    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/10552c49134aebab9cf265e421c9ca5b13c250cab05425649795c24a77196c36?trk=share_certificate" target="_blank">View Certificate</a>
-  </article>
+</section><section class="section" id="skills">
+<div class="section-watermark" aria-hidden="true">03</div>
+<div class="section-head reveal"><p class="kicker">TECHNICAL SKILLS</p><h2>Tools I use to build, test, and debug</h2></div>
+<div class="skill-grid">
+<article class="card reveal"><i class="fas fa-code"></i><h3>Programming</h3><p>C, C++, Python, MATLAB, SystemVerilog, VHDL, Java, SQL, Ladder Logic</p></article>
+<article class="card reveal"><i class="fas fa-microchip"></i><h3>Embedded &amp; Hardware</h3><p>STM32, Raspberry Pi, FPGA, microcontrollers, GPIO, ADC/DAC, PWM, timers, interrupts, DMA, sensors, digital logic</p></article>
+<article class="card reveal"><i class="fas fa-gears"></i><h3>Controls &amp; Automation</h3><p>PLC, HMI, SCADA, PID control, Modbus TCP, VFDs, industrial monitoring</p></article>
+<article class="card reveal"><i class="fas fa-network-wired"></i><h3>Protocols &amp; Interfaces</h3><p>I2C, SPI, UART, TCP/IP, JSON, IoT</p></article>
+<article class="card reveal"><i class="fas fa-screwdriver-wrench"></i><h3>Engineering &amp; PCB Tools</h3><p>KiCad, Autodesk EAGLE, AutoCAD, SolidWorks, ModelSim, oscilloscope, spectrum analyzer</p></article>
+<article class="card reveal"><i class="fas fa-terminal"></i><h3>Systems &amp; Software</h3><p>Linux, Git/GitHub, React.js, AWS Lambda, DynamoDB, API Gateway, Visual Studio, Azure DevOps</p></article>
+</div>
+</section><section class="section alt v1872-coursework" id="coursework">
+<div class="section-watermark" aria-hidden="true">04</div>
+<div class="section-head reveal"><p class="kicker">COURSEWORK</p><h2>Engineering foundation</h2><p>Explore relevant coursework by engineering area.</p></div>
+<div class="course-domains">
+<div class="course-domain reveal"><button aria-expanded="false" class="course-domain-summary" type="button"><span><b>Embedded &amp; Digital</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+<div class="course-item"><strong>EE 281</strong><span>Digital Systems Design/Test</span></div><div class="course-item"><strong>EE 282</strong><span>Digital Systems Design Lab</span></div><div class="course-item"><strong>EE 234</strong><span>Microprocessor Engineering I</span></div><div class="course-item"><strong>EE 334</strong><span>Microprocessor Engineering II</span></div><div class="course-item"><strong>EE 489</strong><span>Real-Time Embedded Systems</span></div>
+</div></div></div></div>
+<div class="course-domain reveal"><button aria-expanded="false" class="course-domain-summary" type="button"><span><b>Controls &amp; Signals</b><small>5 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+<div class="course-item"><strong>EE 341</strong><span>Signals &amp; Systems</span></div><div class="course-item"><strong>EE 358</strong><span>Control Systems</span></div><div class="course-item"><strong>EE 368</strong><span>Control Systems Lab</span></div><div class="course-item"><strong>EE 390</strong><span>Smart Sensor Systems</span></div><div class="course-item"><strong>EE 353</strong><span>Communication Systems Engineering</span></div>
+</div></div></div></div>
+<div class="course-domain reveal"><button aria-expanded="false" class="course-domain-summary" type="button"><span><b>Computer Engineering</b><small>4 courses</small></span><i class="fas fa-chevron-down"></i></button><div class="course-domain-panel"><div class="course-domain-inner"><div class="course-grid">
+<div class="course-item"><strong>EE 245</strong><span>Robotics Programming</span></div><div class="course-item"><strong>EE 332</strong><span>Electronics I</span></div><div class="course-item"><strong>EE 395</strong><span>Computer Hardware &amp; Organization</span></div><div class="course-item"><strong>EE 498</strong><span>Topics: Operating Systems for Heterogeneous Systems</span></div>
+</div></div></div></div>
+</div>
+</section><section class="section" id="experience">
+<div class="section-watermark" aria-hidden="true">05</div>
+<div class="section-head reveal"><p class="kicker">EXPERIENCE</p><h2>Professional and research experience</h2></div>
+<div class="timeline">
+<article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>IT Solutions Consultant</h3><p class="company">Minnesota State University, Mankato</p></div><span>Jan. 2024 – Present</span></div><ul><li>Diagnose hardware, software, network, authentication, and system-integration failures across major desktop and mobile platforms.</li><li>Perform root-cause analysis and support system configuration, validation, documentation, and technical incident resolution.</li><li>Resolved 50+ technical incidents involving endpoints, connectivity, permissions, and enterprise applications.</li></ul></div></article>
+<article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Engineering Associate — Software, Controls &amp; Hardware</h3><p class="company">Ruppell Inc.</p></div><span>Jul. 2025 – Aug. 2026</span></div><ul><li>Contributed to PLC system design and integrated-circuit selection for industrial applications, and performed hardware functional testing to verify system operation.</li><li>Developed sensor-monitoring dashboards using React and AWS, improving data-processing and API performance by 40% through Python workflows and backend optimization.</li><li>Supported hardware–software integration, requirements review, functional testing, troubleshooting, and defect resolution across industrial systems.</li></ul></div></article>
+<article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Undergraduate Research Assistant — FPGA &amp; Digital Systems</h3><p class="company">Minnesota State University, Mankato</p></div><span>Jan. 2024 – May 2024</span></div><ul><li>Supported FPGA research involving VHDL-based digital hardware design, implementation, and verification.</li><li>Developed and simulated VHDL logic modules in ModelSim to verify functionality and identify design issues.</li><li>Assisted with FPGA testing, hardware/software debugging, technical research, and documentation.</li></ul></div></article>
+<article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Undergraduate Research Assistant — Edge-AI Digital Twin</h3><p class="company">Minnesota State University, Mankato</p></div><span>Aug. 2023 – Jan. 2024</span></div><ul><li>Supported digital-twin research integrating real-time sensor data, embedded computing, and cyber-physical system monitoring.</li><li>Assisted with Python development, data processing, testing, and technical research for intelligent control experiments.</li><li>Researched edge computing and predictive maintenance and contributed code, technical findings, and documentation.</li></ul></div></article>
+<article class="timeline-item reveal"><div class="dot"></div><div class="timeline-card"><div class="job-head"><div><h3>Student Manager</h3><p class="company">Sodexo — Minnesota State University, Mankato (UDC)</p></div><span>Aug. 2022 – Aug. 2023</span></div><ul><li>Maintained inventory records and tracked stock levels, sales, and orders using digital systems to support accurate day-to-day operations.</li><li>Troubleshot POS hardware and software issues to restore transaction processing and sales-reporting functionality.</li><li>Provided front-line technical assistance involving store equipment, software, and point-of-sale workflows.</li></ul></div></article>
+</div>
+</section><section class="section alt" id="projects">
+<div class="section-watermark" aria-hidden="true">06</div>
+<div class="section-head reveal"><p class="kicker">PROJECTS</p><h2>Selected engineering work</h2><p>Controls, embedded firmware, PCB/hardware design, AI integration, and robotics.</p></div>
+<div class="project-grid project-independent-columns">
+<div class="project-column project-column-left">
+<article aria-expanded="false" aria-label="Expand Industrial Pump Station Control &amp; Monitoring Simulation project details" class="project-card reveal expandable-project" role="button" tabindex="0"><div class="project-icon"><i class="fas fa-industry"></i></div><p class="tag">Controls &amp; Automation</p><h3>Industrial Pump Station Control &amp; Monitoring Simulation</h3><div class="badges"><span>PLC</span><span>HMI/SCADA</span><span>PID</span><span>VFD</span><span>Python</span><span>Modbus TCP</span></div><ul><li>Modeled multi-pump control with lead/lag sequencing, PID pressure regulation, VFD commands, and automatic pump rotation.</li><li>Designed simulated HMI/SCADA views for pressure, flow, tank level, equipment status, alarms, and operating modes.</li><li>Simulated fault handling and pump failover with Python and Modbus TCP data acquisition.</li></ul><span aria-hidden="true" class="project-expand-chevron"><i class="fas fa-chevron-down"></i></span><div aria-hidden="true" class="project-repo-panel"><div class="project-repo-inner"><a aria-label="View Industrial Pump Station Control &amp; Monitoring Simulation on GitHub" class="project-github-btn" href="https://github.com/pradip2059/industrial_pump_station_monitor" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
+<article aria-expanded="false" aria-label="Expand Smart Door Access Control System project details" class="project-card reveal expandable-project" role="button" tabindex="0"><div class="project-icon"><i class="fas fa-door-closed"></i></div><p class="tag">PCB &amp; Embedded Systems</p><h3>Smart Door Access Control System</h3><div class="badges"><span>KiCad</span><span>EAGLE</span><span>Embedded</span><span>Python</span><span>IoT</span></div><ul><li>Designed and fabricated a PCB for an embedded access-control system integrating electronic locks, sensors, hardware I/O, and authentication hardware.</li><li>Developed hardware–software control logic with sensor processing, anti-spoofing, fail-safe behavior, and reliability testing.</li></ul><span aria-hidden="true" class="project-expand-chevron"><i class="fas fa-chevron-down"></i></span><div aria-hidden="true" class="project-repo-panel"><div class="project-repo-inner"><a aria-label="View Smart Door Access Control System on GitHub" class="project-github-btn" href="https://github.com/pradip2059/smart_door_access_control" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
+<article aria-expanded="false" aria-label="Expand PlantPulse TestBench — Industrial Commissioning &amp; Validation Framework project details" class="project-card reveal expandable-project" role="button" tabindex="0"><div class="project-icon"><i class="fas fa-clipboard-check"></i></div><p class="tag">Test &amp; Validation</p><h3>PlantPulse TestBench — Industrial Commissioning &amp; Validation Framework</h3><div class="badges"><span>Python</span><span>STM32</span><span>UART</span><span>Modbus TCP</span><span>YAML</span><span>Automated Testing</span></div><ul><li>Developed a hardware-agnostic test framework for automated commissioning and validation of embedded controllers and industrial control systems.</li><li>Built YAML-driven test plans with fault injection, telemetry analysis, response-time verification, and automated PASS/FAIL evaluation.</li><li>Implemented interchangeable simulator, STM32/UART, and Modbus TCP interfaces with machine-readable test reports and CI-based software validation.</li></ul><span aria-hidden="true" class="project-expand-chevron"><i class="fas fa-chevron-down"></i></span><div aria-hidden="true" class="project-repo-panel"><div class="project-repo-inner"><a aria-label="View PlantPulse TestBench on GitHub" class="project-github-btn" href="https://github.com/pradip2059/project_plantpluse" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
+</div>
+<div class="project-column project-column-right">
+<article aria-expanded="false" aria-label="Expand STM32 Motor Control &amp; Condition Monitoring project details" class="project-card reveal expandable-project" role="button" tabindex="0"><div class="project-icon"><i class="fas fa-microchip"></i></div><p class="tag">Embedded Firmware</p><h3>STM32 Motor Control &amp; Condition Monitoring</h3><div class="badges"><span>C</span><span>STM32</span><span>UART</span><span>ADC</span><span>PWM</span><span>DMA</span></div><ul><li>Developed embedded C firmware for motor control and sensor acquisition using timers, PWM, ADC, interrupts, and DMA.</li><li>Implemented non-blocking UART telemetry for sensor data, operating states, and fault information.</li><li>Integrated fault-monitoring logic and performed hardware/firmware debugging.</li></ul><span aria-hidden="true" class="project-expand-chevron"><i class="fas fa-chevron-down"></i></span><div aria-hidden="true" class="project-repo-panel"><div class="project-repo-inner"><a aria-label="View STM32 Motor Control &amp; Condition Monitoring on GitHub" class="project-github-btn" href="https://github.com/pradip2059/embedded_firmware_STM32_motor_control" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
+<article aria-expanded="false" aria-label="Expand Interactive AI Voice Assistant project details" class="project-card reveal expandable-project" role="button" tabindex="0"><div class="project-icon"><i class="fas fa-microphone-lines"></i></div><p class="tag">PCB &amp; AI Integration</p><h3>Interactive AI Voice Assistant</h3><div class="badges"><span>KiCad</span><span>EAGLE</span><span>Raspberry Pi</span><span>Python</span><span>GPIO</span></div><ul><li>Designed and fabricated a PCB supporting a Raspberry Pi voice-assistant system with audio and GPIO-controlled hardware.</li><li>Integrated speech recognition, text-to-speech, external AI services, and hardware indicators in Python.</li><li>Performed hardware–software integration and iterative debugging.</li></ul><span aria-hidden="true" class="project-expand-chevron"><i class="fas fa-chevron-down"></i></span><div aria-hidden="true" class="project-repo-panel"><div class="project-repo-inner"><a aria-label="View Interactive AI Voice Assistant on GitHub" class="project-github-btn" href="https://github.com/pradip2059/smart_voice_assistant" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span>View Project on GitHub</span><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></article>
+<article class="project-card reveal"><div class="project-icon"><i class="fas fa-robot"></i></div><p class="tag">Robotics</p><h3>Robotic Engineering Project</h3><div class="badges"><span>C++</span><span>Robotics</span><span>Ultrasonic Sensors</span><span>Terminal UI</span></div><ul><li>Built an interactive terminal-based C++ game using keyboard input, real-time object movement, and collision/bounce behavior.</li><li>Developed a C++ image-to-character rendering program that transformed a digital photograph into a recognizable text-based representation using symbols and character patterns.</li><li>Programmed sensor-equipped mobile robots to navigate, perform coordinated motion routines, and record movement paths using ultrasonic sensing and iterative testing.</li></ul></article>
+</div>
+</div>
+</section><section class="section" id="certificates">
+<div class="section-watermark" aria-hidden="true">07</div>
+<div class="section-head reveal"><p class="kicker">CERTIFICATES</p><h2>Continuing technical learning</h2></div>
 <article class="certificate-card reveal">
-    <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
-    <div><p class="tag">LinkedIn Learning</p><h3>Cert Prep: Revit for Electrical Design Professional</h3><p>Completed Oct. 2, 2026 • 2 hours 11 minutes</p><div class="badges"><span>Electrical Design</span><span>Revit</span></div></div>
-    <a class="btn primary" href="https://www.linkedin.com/learning/certificates/2ea7eed7319e2705ff78479960bd3e5cf45b37ad9e2b42a037e4415e48cc67e8?trk=share_certificate" target="_blank">View Certificate</a>
-  </article>
-</section>
-
-<section id="contact" class="section contact alt">
-  <div class="contact-box reveal"><p class="kicker">LET'S CONNECT</p><h2>Interested in working together?</h2><p>I am exploring entry-level opportunities in controls and automation, embedded systems, electrical hardware and test, and robotics.</p>
-  <div class="hero-actions centered"><a class="btn primary" href="mailto:pradipsapkota.ce@outlook.com"><i class="fas fa-envelope"></i> Email</a><a class="btn" href="https://www.linkedin.com/in/pradip-sapkota-8a93582b0/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><a class="btn" href="https://github.com/pradip2059" target="_blank"><i class="fab fa-github"></i> GitHub</a></div></div>
-</section>
-</main>
-<footer><p>© 2026 Pradip Sapkota • Computer Engineering Portfolio</p></footer>
-<script src="script.js?v=18.5.3-top-arrow"></script>
-<script>
-(()=>{const groups=[...document.querySelectorAll('.course-domain')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;function init(g){const p=g.querySelector('.course-domain-panel'),o=g.classList.contains('is-open');p.style.height=o?'auto':'0px';p.style.opacity=o?'1':'0';}function toggle(g){const p=g.querySelector('.course-domain-panel'),btn=g.querySelector('.course-domain-summary'),opening=!g.classList.contains('is-open');if(reduce){g.classList.toggle('is-open',opening);btn.setAttribute('aria-expanded',opening);p.style.height=opening?'auto':'0px';p.style.opacity=opening?'1':'0';return;}const from=p.getBoundingClientRect().height;p.style.height=from+'px';p.offsetHeight;g.classList.toggle('is-open',opening);btn.setAttribute('aria-expanded',opening);const to=opening?p.scrollHeight:0;p.style.height=to+'px';p.style.opacity=opening?'1':'0';const done=e=>{if(e.propertyName!=='height')return;p.removeEventListener('transitionend',done);p.style.height=opening?'auto':'0px';};p.addEventListener('transitionend',done);}groups.forEach(g=>{init(g);g.querySelector('.course-domain-summary').addEventListener('click',()=>toggle(g));});})();
-</script>
-</body></html>
+<div class="cert-icon"><i class="fab fa-linkedin"></i></div>
+<div><p class="tag">LinkedIn Learning</p><h3>Learning SCADA: Collect, Analyze, and Visualize Data for Industrial Automation</h3><p>Completed Sep. 29, 2026 • 2 hours 19 minutes</p><div class="badges"><span>Industrial Automation</span><span>SCADA</span></div></div>
+<a class="btn primary" href="https://www.linkedin.com/learning/certificates/10552c49134aebab9cf265e421c9ca5b13c250cab05425649795c24a77196c36?trk=share_certificate" target="_blank">View Certificate</a>
+</article>
+<article class="certificate-card reveal">
+<div class="cert-icon"><i class="fab fa-linkedin"></i></div>
+<div><p class="tag">LinkedIn Learning</p><h3>Cert Prep: Revit for Electrical Design Professional</h3><p>Completed Oct. 2, 2026 • 2 hours 11 minutes</p><div class="badges"><span>Electrical Design</span><span>Revit</span></div></div>
+<a class="btn primary" href="https://www.linkedin.com/learning/certificates/2ea7eed7319e2705ff78479960bd3e5cf45b37ad9e2b42a037e4415e48cc67e8?trk=share_certificate" target="_blank">View Certificate</a>
+</article>
+</section><section class="section contact alt" id="contact">
+<div class="section-watermark" aria-hidden="true">08</div>
+<div class="contact-box reveal"><p class="kicker">LET'S CONNECT</p><h2>Interested in working together?</h2><p>I am exploring entry-level opportunities in controls and automation, embedded systems, electrical hardware and test, and robotics.</p>
+<div class="hero-actions centered"><a class="btn primary" href="mailto:pradipsapkota.ce@outlook.com"><i class="fas fa-envelope"></i> Email</a><a class="btn" href="https://www.linkedin.com/in/pradip-sapkota-8a93582b0/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><a class="btn" href="https://github.com/pradip2059" target="_blank"><i class="fab fa-github"></i> GitHub</a></div></div>
+</section></main><footer class="site-footer"><span>PS<span class="accent">✳</span> / ENGINEERING PORTFOLIO</span><span>© 2026 PRADIP SAPKOTA</span><a href="#home">BACK TO TOP ↑</a></footer><script src="v20.js?v=20.0"></script></body></html>
